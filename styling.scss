@@ -316,35 +316,70 @@ body.no-scroll {
 }
 
 .exp-card {
-  background: linear-gradient(135deg, $matrix-bg-color, #112211);
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   position: relative;
+  padding: 2.5rem;
+  border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   max-width: 1000px;
   width: 100%;
+  color: #0f0;
+  background: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 255, 0, 0.1) 2px
+    );
+    animation: matrixBackground 10s linear infinite;
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #0f0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0f0;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
 
   &:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.55);
-    background: linear-gradient(145deg, #006800, #004600);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+
+    &:after {
+      opacity: 1;
+    }
   }
 
   h3 {
-    font-size: 1.5rem;
-    color: $matrix-dark;
+    font-size: 1.8rem;
+    color: #0f0;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px #0f0;
   }
 
   p,
   ul li {
-    font-size: 1.1rem;
-    color: $matrix-lighter;
+    font-size: 1.2rem;
+    color: #0f0;
     margin-top: 0.5rem;
+    text-shadow: 0 0 5px #0f0;
   }
 
   ul {
@@ -354,14 +389,15 @@ body.no-scroll {
 
     li {
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
 
       &::before {
-        content: "➜";
+        content: "➤";
         position: absolute;
         left: 0;
-        color: #00ff00;
+        color: #0f0;
         font-size: 1.2rem;
+        animation: blink 2s infinite;
       }
     }
   }
@@ -378,52 +414,71 @@ body.no-scroll {
 }
 
 .project {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
   max-width: 600px;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, $matrix-bg-color, #001400);
-  padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.35);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+  color: #0f0;
+  background: #000;
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 
-  &:hover {
-    transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.55);
-    background: linear-gradient(145deg, #005500, #003300);
-  }
-
-  &::before {
+  &:before {
     content: "";
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(
-      circle,
+    background: repeating-linear-gradient(
+      90deg,
       transparent,
-      rgba(0, 255, 0, 0.15),
-      transparent
+      transparent 1px,
+      rgba(0, 255, 0, 0.1) 2px
     );
-    animation: rotateProjectGradient 8s linear infinite;
+    animation: matrixBackground 15s linear infinite;
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid #0f0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0f0;
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.8);
+
+    &:after {
+      opacity: 1;
+    }
   }
 
   h3 {
-    font-size: 1.5rem;
-    color: $matrix-dark;
+    font-size: 1.8rem;
+    color: #0f0;
     font-weight: bold;
     margin-bottom: 1rem;
+    text-shadow: 0 0 10px #0f0;
   }
 
   p,
   .project-details {
-    font-size: 1.1rem;
-    color: $matrix-lighter;
+    font-size: 1.2rem;
+    color: #0f0;
     margin-top: 1rem;
+    text-shadow: 0 0 5px #0f0;
   }
 
   .technologies {
@@ -439,27 +494,39 @@ body.no-scroll {
     margin-top: 1rem;
 
     li {
-      margin-bottom: 0.5rem;
       position: relative;
-      padding-left: 20px;
+      padding-left: 25px;
 
       &::before {
-        content: "➜";
+        content: "⚡";
         position: absolute;
         left: 0;
-        color: #00ff00;
+        color: #0f0;
         font-size: 1.2rem;
+        animation: blink 2s infinite;
       }
     }
   }
+}
 
-  @keyframes rotateProjectGradient {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+@keyframes matrixBackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, 100%);
+  }
+}
+
+@keyframes blink {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
   }
 }
 

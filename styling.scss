@@ -1,0 +1,657 @@
+$background-dark: #000;
+$matrix-dark: #0f0;
+$matrix-lighter: #0f7;
+$matrix-light: #1f7;
+$matrix-bg-color: #001900;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
+  width: 100%;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid #0f0;
+  background: #000;
+  overflow: visible;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; // allows absolute positioning of children
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #00ff00;
+  z-index: 5;
+  text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00;
+  animation: textGlowEffect 4s infinite alternate;
+  transition: transform 0.5s ease, color 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  color: #0ff;
+}
+
+@keyframes textGlowEffect {
+  0% {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00;
+  }
+  20% {
+    text-shadow: -3px -3px 10px #1aff66, 3px 3px 10px #99ffcc;
+  }
+  40% {
+    text-shadow: 0 0 5px #33cc33, 0 0 10px #00cc00, 5px -5px 20px #009933;
+  }
+  60% {
+    text-shadow: 0 0 15px #00ff00, 0 0 25px #1aff66, -5px 5px 30px #00cc00;
+  }
+  80% {
+    text-shadow: -3px 3px 10px #33cc33, 3px -3px 10px #66ff99;
+  }
+  100% {
+    text-shadow: 0 0 5px #00ff00, 0 0 15px #1aff66, 0 0 30px #00ff00;
+  }
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  background-color: #0f0;
+  transition: background-color 0.3s ease;
+}
+
+.side-nav-toggle {
+  position: absolute; // positioned within & w.r.t the navbar
+  left: 20px; // keep it at the extreme left
+  cursor: pointer;
+  z-index: 1001;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, rotate 0.3s ease;
+
+  &.rotated {
+    transform: rotate(90deg);
+  }
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: $background-dark;
+  color: #0f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#main-content {
+  flex: 1;
+  width: 80%;
+  max-width: 1200px;
+  margin: 1rem auto 2rem auto;
+  padding: 0 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  padding: 1rem 0;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.side-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  background: #111;
+  padding-top: 3rem;
+  transition: transform 0.4s ease;
+  transform: translateX(-100%);
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.side-nav.open {
+  transform: translateX(0);
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 3rem; // ensures gap between top and ul items
+}
+
+.side-nav ul li {
+  margin: 1.5rem 0;
+}
+
+.side-nav ul a {
+  color: #0f0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.side-nav ul a:hover {
+  color: $matrix-light;
+}
+
+// about me
+.about-me-card {
+  background: linear-gradient(135deg, #111, #1a1a1a);
+  color: #00ff00;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.4);
+  max-width: 900px;
+  margin: 2rem auto 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s, box-shadow 0.5s;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 30px rgba(0, 255, 0, 0.6);
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1aff66;
+    text-shadow: 0 0 8px #00ff00;
+  }
+
+  p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    text-align: justify;
+    color: #0f7;
+  }
+
+  &:before,
+  &:after {
+    // border effect
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #00ff00;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    transition: all 0.5s ease-in-out;
+    pointer-events: none;
+  }
+
+  &:hover:before {
+    transform: rotate(3deg) scale(1.05);
+  }
+
+  &:hover:after {
+    transform: rotate(-3deg) scale(1.05);
+  }
+}
+
+// skills section
+#skills {
+  margin: 10px auto 30px auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  margin: 2rem auto 3rem;
+}
+
+.skill-category {
+  background: #222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+}
+
+.skill-category:hover {
+  transform: translateZ(40px);
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.77);
+}
+
+.skill-category:hover ~ .skill-category {
+  transform: rotateY(8deg);
+}
+
+/* edu cards */
+.education-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 3rem;
+  margin: 2rem auto 3rem;
+}
+
+.card {
+  background: linear-gradient(145deg, $matrix-bg-color, #113);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 255, 0, 0.4);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.6);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    color: $matrix-dark;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $matrix-lighter;
+    margin-top: 1rem;
+
+    &:first-of-type {
+      font-weight: bold;
+    }
+  }
+}
+
+// exp card
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem auto 3rem;
+  padding: 0;
+  overflow: visible;
+  align-items: center;
+}
+
+.exp-card {
+  background: linear-gradient(135deg, $matrix-bg-color, #112211);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  max-width: 1000px;
+  width: 100%;
+
+  &:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.55);
+    background: linear-gradient(145deg, #006800, #004600);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $matrix-dark;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p,
+  ul li {
+    font-size: 1.1rem;
+    color: $matrix-lighter;
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+
+    li {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "➜";
+        position: absolute;
+        left: 0;
+        color: #00ff00;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+// proj card
+.project-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  margin: 2rem auto 3rem;
+  justify-items: center; // center items horizontally within cells
+  align-items: start; // align items to the top of cells
+}
+
+.project {
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, $matrix-bg-color, #001400);
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 255, 0, 0.55);
+    background: linear-gradient(145deg, #005500, #003300);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(
+      circle,
+      transparent,
+      rgba(0, 255, 0, 0.15),
+      transparent
+    );
+    animation: rotateProjectGradient 8s linear infinite;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $matrix-dark;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  p,
+  .project-details {
+    font-size: 1.1rem;
+    color: $matrix-lighter;
+    margin-top: 1rem;
+  }
+
+  .technologies {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ff00;
+    margin-top: 0.5rem;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: "➜";
+        position: absolute;
+        left: 0;
+        color: #00ff00;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  @keyframes rotateProjectGradient {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// footer
+footer {
+  background: #111;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+  margin-top: auto; // footer is pushed to the bottom
+}
+
+footer a {
+  color: #0f0;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: $matrix-light;
+}
+
+@media (max-width: 405px) {
+  .side-nav ul {
+    margin-top: 200px;
+  }
+}
+
+// for responsive pages
+@media (max-width: 768px) {
+  .side-nav {
+    width: 90%;
+  }
+
+  // cards should have more width
+  #main-content {
+    width: 95%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .skills-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .experience-card {
+    width: 95%;
+    padding: 0;
+    gap: 2.5rem;
+  }
+
+  .exp-card {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0;
+    background: linear-gradient(135deg, $matrix-bg-color, #112211);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 15px 30px rgba(0, 255, 0, 0.6);
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      text-align: justify;
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: $matrix-dark;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  ul li {
+    padding-left: 0;
+  }
+
+  .project {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-header {
+    padding-bottom: 1rem; // to accomodate the overflowed content
+  }
+
+  .navbar {
+    position: relative; // override base style
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+    height: auto; // override height
+  }
+
+  .side-nav-toggle {
+    order: 2;
+    position: relative; // explicitly set position to override fixed
+    flex-shrink: 0; // prevent icon shrink
+    top: 0; // override
+    left: 0; // override
+    margin-top: 10px;
+  }
+
+  .logo {
+    font-size: 2rem;
+    order: 1;
+    flex-grow: 1; // make sure the name takes up available space
+    text-align: center;
+  }
+
+  #main-content {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .side-nav {
+    width: 80%;
+    position: fixed;
+  }
+
+  .side-nav ul {
+    margin-top: 100px;
+  }
+
+  .about-me-card {
+    width: 90%;
+  }
+
+  // card sizing
+  .experience-card {
+    padding: 0;
+  }
+
+  .exp-card {
+    ul {
+      text-align: left;
+    }
+  }
+
+  .education-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card {
+    margin: 10px 0;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .project {
+    width: 90%;
+    margin: 0 auto;
+    ul {
+      text-align: left;
+    }
+  }
+}
+
+.section h2 {
+  text-align: center;
+}

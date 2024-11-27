@@ -1,0 +1,319 @@
+.about-section {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease forwards;
+  overflow: hidden;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.about-section .about-modal {
+  z-index: 1000;
+  background: #1e1e1e;
+  border-radius: 15px;
+  width: 80%;
+  max-width: 1100px;
+  max-height: 90vh;
+  color: #f0f0f0;
+  box-shadow: 0 8px 16px #38b6ff;
+  padding: 2rem;
+  position: relative;
+  animation: slideIn 1s ease forwards;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-modal {
+    max-height: 80vh;
+  }
+}
+@media (max-width: 400px) {
+  .about-section .about-modal {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+  }
+}
+.about-section .about-modal .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.about-section .about-modal .close-icon:hover {
+  color: #38b6ff;
+  background-color: rgba(56, 182, 255, 0.2);
+  box-shadow: 0 0 15px #38b6ff;
+}
+.about-section .about-modal .modal-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+.about-section .about-modal .modal-content .major-heading {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  border-bottom: 2px solid #38b6ff;
+  display: inline-block;
+  animation: headingGlow 2s ease-in-out infinite alternate;
+  transition: font-size 1s ease;
+}
+.about-section .about-modal .modal-content .major-heading:after {
+  background: none;
+}
+@keyframes headingGlow {
+  from {
+    text-shadow: 0 0 10px #38b6ff;
+  }
+  to {
+    text-shadow: 0 0 30px #38b6ff;
+  }
+}
+@media (max-width: 1000px) {
+  .about-section .about-modal .modal-content .major-heading {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-modal .modal-content .major-heading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 490px) {
+  .about-section .about-modal .modal-content .major-heading {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 300px) {
+  .about-section .about-modal .modal-content .major-heading {
+    font-size: 1.3rem;
+  }
+}
+.about-section .about-modal .modal-content .image-and-text:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.about-section .about-modal .modal-content .image-and-text .profile-image {
+  float: left;
+  width: 60%;
+  max-width: 300px;
+  height: 270px;
+  border-radius: 50%;
+  margin: 1rem 2rem 2rem 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, width 1s ease, height 1s ease;
+}
+@media (max-width: 768px) {
+  .about-section .about-modal .modal-content .image-and-text .profile-image {
+    float: none;
+    display: block;
+    margin: 0 auto 1rem auto;
+    width: 250px;
+    height: 250px;
+  }
+  .about-section .about-modal .modal-content .image-and-text .profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #38b6ff;
+  }
+}
+@media (max-width: 468px) {
+  .about-section .about-modal .modal-content .image-and-text .profile-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 300px) {
+  .about-section .about-modal .modal-content .image-and-text .profile-image {
+    width: 95%;
+    height: 95%;
+  }
+  .about-section .about-modal .modal-content .image-and-text .profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #38b6ff;
+  }
+}
+.about-section .about-modal .modal-content .image-and-text .about-me-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+  text-align: justify;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease forwards;
+}
+.about-section .about-modal .modal-content .image-and-text .about-me-text.clear-float {
+  clear: left;
+}
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.about-section .about-modal .modal-content .section {
+  margin-bottom: 3rem;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.about-section .about-modal .modal-content .section .section-heading {
+  font-size: 2rem;
+  color: #38b6ff;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+  transition: font-size 1s ease;
+}
+.about-section .about-modal .modal-content .section .section-heading:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 50%;
+  height: 3px;
+  background: #38b6ff;
+}
+@media (max-width: 1000px) {
+  .about-section .about-modal .modal-content .section .section-heading {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-modal .modal-content .section .section-heading {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 490px) {
+  .about-section .about-modal .modal-content .section .section-heading {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 300px) {
+  .about-section .about-modal .modal-content .section .section-heading {
+    font-size: 1.2rem;
+  }
+}
+.about-section .about-modal .modal-content .section.education-section {
+  background: linear-gradient(135deg, #1e1e1e 25%, #ff5733 100%);
+  background-size: 200% 200%;
+  animation: educationAnim 10s ease infinite;
+}
+@keyframes educationAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.about-section .about-modal .modal-content .section.education-section .education-item {
+  margin-bottom: 2rem;
+}
+.about-section .about-modal .modal-content .section.education-section .education-item h4 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  position: relative;
+  animation: textGlow 2s ease-in-out infinite alternate;
+  transition: font-size 1s ease;
+}
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 10px #ff5733;
+  }
+  to {
+    text-shadow: 0 0 20px #ff5733;
+  }
+}
+@media (max-width: 1000px) {
+  .about-section .about-modal .modal-content .section.education-section .education-item h4 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 768px) {
+  .about-section .about-modal .modal-content .section.education-section .education-item h4 {
+    font-size: 1.2rem;
+  }
+}
+.about-section .about-modal .modal-content .section.education-section .education-item p {
+  font-size: 1rem;
+  color: #f0f0f0;
+  margin-bottom: 0.5rem;
+}
+.about-section .about-modal .modal-content .section.connect-section {
+  background: linear-gradient(135deg, #1e1e1e 25%, #28a745 100%);
+  background-size: 200% 200%;
+  animation: connectAnim 10s ease infinite;
+}
+@keyframes connectAnim {
+  0% {
+    background-position: 100% 50%;
+  }
+  50% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+.about-section .about-modal .modal-content .section.connect-section .connect-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: center;
+  transition: font-size 1s ease;
+}
+@media (max-width: 468px) {
+  .about-section .about-modal .modal-content .section.connect-section .connect-text {
+    font-size: 1rem;
+  }
+}
+.about-section .about-modal .modal-content .section.connect-section .quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+  transition: font-size 1s ease;
+}
+@media (max-width: 468px) {
+  .about-section .about-modal .modal-content .section.connect-section .quote {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=About.css.map */

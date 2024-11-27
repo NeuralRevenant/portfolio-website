@@ -1,0 +1,371 @@
+$primary-color: #2c3e50;
+$secondary-color: #2980b9;
+$tertiary-color: #27ae60;
+$text-color: #ecf0f1;
+$background-color: #0d0d0dc4;
+$background-overlay: rgba(44, 62, 80, 0.95);
+$modal-background: #34495e;
+$box-shadow: 0 8px 16px #38b6ff;
+$border-radius: 10px;
+$transition-duration: 0.3s;
+
+.experience-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $background-overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.experience-modal {
+  position: relative;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 90vh;
+  background: $background-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  animation: slideIn 0.8s ease forwards,
+    shadowEffects 5s ease-in-out infinite alternate;
+  z-index: 1001;
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes shadowEffects {
+    from {
+      box-shadow: 0 0 0 #ffffff;
+    }
+    to {
+      box-shadow: 0 15px 20px #ffffff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    max-height: 80vh;
+    padding: 2rem 1.5rem;
+  }
+
+  @media (max-width: 470px) {
+    width: 85%;
+    padding: 2rem 1rem;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  width: 30px;
+  height: 30px;
+  color: $text-color;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color $transition-duration ease,
+    box-shadow $transition-duration ease,
+    background-color $transition-duration ease;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    background-color: rgba(41, 128, 185, 0.2);
+    box-shadow: 0 0 15px $secondary-color;
+  }
+}
+
+.modal-content {
+  margin-top: 2rem;
+  text-align: center;
+
+  .major-heading {
+    font-size: 2.4rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+    color: $text-color;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: font-size 1s ease;
+    animation: textEffect 2s ease infinite alternate;
+
+    @keyframes textEffect {
+      from {
+        text-shadow: 0 0 10px #38b6ff;
+      }
+      to {
+        text-shadow: 0 0 30px #38b6ff;
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: $secondary-color;
+      border-radius: 2px;
+    }
+
+    @media (max-width: 1200px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 1000px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 468px) {
+      font-size: 1.6rem;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: 280px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  .top-logo {
+    display: block;
+    margin: 0 auto 3rem auto;
+    max-width: 100%;
+    border-radius: $border-radius;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform $transition-duration ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .experience-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    animation: fadeInUp 0.8s forwards;
+    opacity: 0;
+    transform: translateY(50px);
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row;
+
+      .company-logo {
+        margin-right: 2rem;
+      }
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .company-logo {
+        margin-left: 2rem;
+      }
+    }
+
+    .company-logo {
+      width: 250px;
+      height: 250px;
+      border-radius: $border-radius;
+      box-shadow: 0 5px 15px rgba(195, 195, 195, 0.5);
+      margin: 0;
+      object-fit: cover;
+      transition: transform $transition-duration ease, width 1s ease,
+        height 1s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      @media (max-width: 768px) {
+        width: 200px;
+        height: 200px;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+
+      @media (max-width: 468px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media (max-width: 290px) {
+        width: 100px;
+        height: 100px;
+      }
+    }
+
+    .role-description {
+      flex: 1;
+
+      h3 {
+        color: $secondary-color;
+        font-size: 1.8rem;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        // display: flex;
+        // align-items: center;
+        transition: font-size 1s ease;
+
+        .icon {
+          margin-right: 0.5rem;
+          color: $text-color;
+        }
+
+        @media (max-width: 1000px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.3rem;
+        }
+
+        @media (max-width: 468px) {
+          font-size: 1.2rem;
+        }
+
+        @media (max-width: 300px) {
+          font-size: 1.1rem;
+        }
+      }
+
+      .experience-company {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        color: lighten($text-color, 20%);
+        margin: 0;
+        margin-bottom: 0.2rem;
+        text-align: center;
+        transition: font-size 1s ease;
+
+        @media (max-width: 1000px) {
+          font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+
+        @media (max-width: 468px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 290px) {
+          font-size: 1rem;
+        }
+      }
+
+      .experience-date {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        color: lighten($text-color, 40%);
+        text-align: center;
+        margin: 0;
+        margin-bottom: 1rem;
+        transition: font-size 1s ease;
+
+        @media (max-width: 1000px) {
+          font-size: 1.3rem;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+
+        @media (max-width: 468px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 290px) {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: $text-color;
+        line-height: 1.6;
+        text-align: justify;
+        transition: font-size 1s ease;
+
+        @media (max-width: 768px) {
+          font-size: 1.1rem;
+        }
+
+        @media (max-width: 468px) {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      justify-items: center;
+      gap: 1rem;
+
+      &:nth-child(odd) {
+        flex-direction: column;
+
+        .company-logo {
+          margin: 0;
+        }
+      }
+
+      &:nth-child(even) {
+        flex-direction: column;
+
+        .company-logo {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

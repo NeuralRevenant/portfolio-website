@@ -45,7 +45,7 @@ const Projects = () => {
         "Docker",
         "JWT",
         "Gradle",
-        "Postman"
+        "Postman",
       ],
     },
     {

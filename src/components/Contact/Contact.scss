@@ -1,0 +1,215 @@
+$primary-color: #0056b3;
+$secondary-color: #38b6ff;
+$error-color: #ff6b6b;
+$background-color: #0d0d0d;
+$text-color: #e0e0e0;
+$hover-text-color: #f5f5f5;
+$border-radius: 10px;
+$transition-duration: 0.3s;
+$font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+.contact-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1c1c1c, #282828, #1a1a1a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.contact-modal {
+  position: relative;
+  width: 85%;
+  max-width: 900px;
+  max-height: 90vh;
+  background-color: $background-color;
+  color: $text-color;
+  border-radius: $border-radius;
+  padding: 2rem;
+  overflow-y: auto;
+  z-index: 1001;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  animation: slideIn 0.8s ease forwards, boxShadowPulse 4s infinite alternate;
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes boxShadowPulse {
+    0% {
+      box-shadow: 0 2px 2px rgba(225, 225, 225, 0.893);
+    }
+    100% {
+      box-shadow: 0 15px 15px rgba(56, 182, 255, 0.5);
+    }
+  }
+
+  @media (max-width: 768px) {
+    max-height: 80vh;
+    width: 75%;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    padding: 2rem 1rem;
+  }
+}
+
+.close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  color: $text-color;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: color $transition-duration ease,
+    box-shadow $transition-duration ease,
+    background-color $transition-duration ease;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    background-color: rgba(56, 182, 255, 0.2);
+    box-shadow: 0 0 15px $secondary-color;
+  }
+}
+
+.modal-content {
+  margin-top: 2rem;
+  text-align: center;
+
+  .contact-heading {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $secondary-color;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $font-family;
+    animation: glowEffect 4s ease infinite alternate;
+    transition: font-size 1s ease;
+
+    @keyframes glowEffect {
+      from {
+        text-shadow: 0 0 10px rgb(86, 207, 255);
+      }
+      to {
+        text-shadow: 0 0 30px $primary-color;
+      }
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 468px) {
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: 300px) {
+      font-size: 1.3rem;
+    }
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: lighten($text-color, 10%);
+    font-family: $font-family;
+    text-align: left;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 1rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid $secondary-color;
+    border-radius: $border-radius;
+    background-color: darken($background-color, 10%);
+    color: $text-color;
+    transition: border-color $transition-duration ease,
+      box-shadow $transition-duration ease;
+    font-family: $font-family;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 8px rgba($primary-color, 0.5);
+      outline: none;
+    }
+
+    &.error {
+      border-color: $error-color;
+      background-color: darken($background-color, 15%);
+      color: $error-color;
+
+      &:focus {
+        box-shadow: 0 0 8px rgba($error-color, 0.5);
+      }
+    }
+  }
+
+  .contact-textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .contact-button {
+    background-color: $secondary-color;
+    color: $hover-text-color;
+    padding: 0.75rem;
+    border: none;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color $transition-duration ease,
+      color $transition-duration ease, box-shadow $transition-duration ease;
+    font-family: $font-family;
+
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: $hover-text-color;
+      box-shadow: 0 0 10px rgba($primary-color, 0.5);
+    }
+  }
+
+  .status-message {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: $primary-color;
+    font-family: $font-family;
+  }
+}

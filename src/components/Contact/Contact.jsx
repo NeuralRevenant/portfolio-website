@@ -54,8 +54,7 @@ const Contact = () => {
         setStatus("Failed to send message. Please try again.");
       }
     } catch (err) {
-      console.error("Error: ", err);
-      setStatus("An error occurred. Please try again later.");
+      setStatus("Failed to send message. Please try again.");
     }
   };
 

@@ -54,7 +54,7 @@ const Projects = () => {
       description: [
         "Developed an AI-based hate speech classifier utilizing CNNs and transformer models like BERT.",
         "Integrated FastText embeddings for effective content filtering through natural language processing.",
-        "Achieved an incredible 99% accuracy in detecting and categorizing hate speech in test data.",
+        "Achieved an incredible 99% accuracy on small datasets (larger datasets in progress) in detecting and categorizing hate speech in test data.",
       ],
       technologies: [
         "Python",

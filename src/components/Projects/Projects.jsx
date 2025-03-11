@@ -28,6 +28,71 @@ const Projects = () => {
 
   const projectsData = [
     {
+      title: "Medical Chatbot",
+      logo: "medicalChatbotLogo",
+      description: [
+        "Developed a conversational AI assistant that provides accurate, real-time medical query responses leveraging the Semantic Query Engine.",
+        "Integrates retrieval-augmented generation (RAG) with LLM-based reasoning to generate responses based on relevant clinical documents and medical literature.",
+        "Engineered using FastAPI, Next.js, and PostgreSQL for secure, scalable deployment and real-time user interactions.",
+        "Supports natural language querying and advanced filtering mechanisms for accurate fast information/document retrievals.",
+      ],
+      technologies: [
+        "Python",
+        "Next.js",
+        "FastAPI",
+        "PostgreSQL",
+        "PyTorch",
+        "Transformers (Hugging Face)",
+        "Docker",
+        "REST",
+        "OpenSearch",
+        "Redis",
+        "BlueHiveAI",
+      ],
+    },
+    {
+      title: "Semantic Query Engine",
+      logo: "semanticQueryEngineLogo",
+      description: [
+        "Designed and implemented a high-speed, context-aware retrieval system for medical and EHR documents using RAG, NLP, and LLMs.",
+        "Built using transformers like DistilBERT for query intent classification and OpenSearch for ANN-based vector search + hybrid search.",
+        "Integrated Redis caching to enable low-latency responses and FastAPI RESTful APIs for real-time query processing.",
+        "Optimized system for high accuracy and near real-time query answering using intelligent embeddings and hybrid search techniques.",
+      ],
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Transformers (Hugging Face)",
+        "embedding models and LLMs (Ollama and BlueHiveAI)",
+        "OpenSearch",
+        "Redis",
+        "FastAPI",
+        "NumPy",
+        "Scikit-learn",
+        "Docker",
+      ],
+    },
+    {
+      title: "Lexi-Phylax",
+      logo: lexiPhylaxLogo,
+      description: [
+        "Initially developed an AI-based hate speech classifier utilizing a BERT-based transformer model from Hugging Face, trained on custom datasets and deployed for inference.",
+        "Currently building a custom transformer model with ~400M parameters, fine-tuned specifically for nuanced hate speech classification.",
+        "Achieved an incredible 98% accuracy on datasets (larger datasets in progress) in detecting and categorizing hate speech in test data.",
+      ],
+      technologies: [
+        "Python",
+        "PyTorch",
+        "Transformers (Hugging Face)",
+        "Custom Transformer Architecture",
+        "FastText",
+        "Scikit-learn",
+        "Seaborn",
+        "Matplotlib",
+        "Kaggle",
+      ],
+    },
+    {
       title: "PlanPulse",
       logo: planPulseLogo,
       description: [
@@ -49,31 +114,13 @@ const Projects = () => {
       ],
     },
     {
-      title: "Lexi-Phylax",
-      logo: lexiPhylaxLogo,
-      description: [
-        "Developed an AI-based hate speech classifier utilizing CNNs and transformer models like BERT.",
-        "Integrated FastText embeddings for effective content filtering through natural language processing.",
-        "Achieved an incredible 99% accuracy on small datasets (larger datasets in progress) in detecting and categorizing hate speech in test data.",
-      ],
-      technologies: [
-        "Python",
-        "PyTorch",
-        "FastText",
-        "Scikit-learn",
-        "Seaborn",
-        "Matplotlib",
-        "Kaggle",
-        "Transformers (Hugging Face)",
-      ],
-    },
-    {
       title: "SwiftNet",
       logo: swiftNetLogo,
       description: [
         "Designed a C++ networking library optimized for low-latency, high-throughput applications.",
         "Incorporated io_uring and kqueue-based event loops for efficient, asynchronous I/O.",
         "Leveraged modern C++ coroutines to build virtual thread task offloading, improving CPU utilization and request handling.",
+        "This library/framework is designed keeping in mind the good features from both the Node.js and the Spring Boot frameworks where one offers asynchronous request handling and the other parallel programming.",
       ],
       technologies: [
         "Modern C++",

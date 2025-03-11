@@ -11,6 +11,7 @@ import purdueLogo from "../../assets/images/purdue.jpeg";
 import wibmoLogo from "../../assets/images/wibmo.jpg";
 import freechargeLogo from "../../assets/images/freecharge.png";
 import ravginsLogo from "../../assets/images/ravgins.webp";
+import mieLogo from "../../assets/images/MIE_logo.webp";
 import "./Experience.css";
 
 const Experience = () => {
@@ -49,6 +50,39 @@ const Experience = () => {
           <img src={workLogo} alt="Experience Logo" className="top-logo" />
 
           <div className="experience-item">
+            <img
+              src={mieLogo}
+              alt="Medical Informatics Engineering Logo"
+              className="company-logo"
+            />
+
+            <div className="role-description">
+              <h3>
+                <span className="icon">
+                  <FontAwesomeIcon icon={faBriefcase} />
+                </span>
+                Software Development Intern
+              </h3>
+              <h4 className="experience-company">
+                Medical Informatics Engineering
+              </h4>
+              <h4 className="experience-date">January 2025 - Present</h4>
+              <p>
+                At Medical Informatics Engineering, I am developing a Medical
+                Chatbot and a Semantic Query Engine for electronic health
+                records (EHR) using RAG, NLP, LLMs, and transformer models like
+                DistilBERT. My work focuses on query intent classification,
+                OpenSearch vector search, Redis caching, and optimizations to
+                enhance response accuracy and speed. This system powers a
+                medical chatbot that delivers real-time, precise responses to
+                complex queries. Additionally, I design scalable frontend (using
+                Next.js) and backend services, ensuring seamless integration
+                with cloud-native architectures and distributed systems.
+              </p>
+            </div>
+          </div>
+
+          <div className="experience-item">
             <img src={purdueLogo} alt="Purdue Logo" className="company-logo" />
 
             <div className="role-description">
@@ -59,7 +93,7 @@ const Experience = () => {
                 Teaching Assistant & Research Assistant
               </h3>
               <h4 className="experience-company">Purdue University</h4>
-              <h4 className="experience-date">September 2024 - Present</h4>
+              <h4 className="experience-date">September 2024 - Jan 2025</h4>
               <p>
                 As a Teaching Assistant for Programming Language Design, I work
                 closely with professors to deliver course material, grade
@@ -94,10 +128,11 @@ const Experience = () => {
                 reliability under high-traffic conditions. Additionally, I
                 reduced latency by 20% by developing asynchronous, event-driven
                 systems with RabbitMQ and Kafka, and optimized transaction
-                processing time using advanced techniques. My work encompassed a
-                diverse tech stack, including Spring Boot, MySQL, Couchbase,
-                Redis, Node.js, Docker, Linux, and AWS, to deliver robust and
-                secure solutions.
+                processing time using advanced techniques. My work also
+                encompassed contributing to data migration scripts and a diverse
+                tech stack, including Spring Boot, MySQL, Couchbase, Redis,
+                Node.js, Docker, Linux, and AWS, to deliver robust and secure
+                solutions.
               </p>
             </div>
           </div>

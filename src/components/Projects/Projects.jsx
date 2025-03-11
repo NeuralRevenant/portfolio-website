@@ -11,6 +11,8 @@ import mathEvaluatorLogo from "../../assets/images/calc.webp";
 import sambhashanLogo from "../../assets/images/globe.webp";
 import musicPlayerLogo from "../../assets/images/music.webp";
 import planPulseLogo from "../../assets/images/planpulse.webp";
+import semanticQueryEngineLogo from "../../assets/images/semantic-query-engine.webp";
+import medicalChatbotLogo from "../../assets/images/medical-chatbot.webp";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -29,7 +31,7 @@ const Projects = () => {
   const projectsData = [
     {
       title: "Medical Chatbot",
-      logo: "medicalChatbotLogo",
+      logo: medicalChatbotLogo,
       description: [
         "Developed a conversational AI assistant that provides accurate, real-time medical query responses leveraging the Semantic Query Engine.",
         "Integrates retrieval-augmented generation (RAG) with LLM-based reasoning to generate responses based on relevant clinical documents and medical literature.",
@@ -52,7 +54,7 @@ const Projects = () => {
     },
     {
       title: "Semantic Query Engine",
-      logo: "semanticQueryEngineLogo",
+      logo: semanticQueryEngineLogo,
       description: [
         "Designed and implemented a high-speed, context-aware retrieval system for medical and EHR documents using RAG, NLP, and LLMs.",
         "Built using transformers like DistilBERT for query intent classification and OpenSearch for ANN-based vector search + hybrid search.",

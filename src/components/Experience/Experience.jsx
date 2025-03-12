@@ -77,7 +77,7 @@ const Experience = () => {
                 medical chatbot that delivers real-time, precise responses to
                 complex queries. Additionally, I design scalable frontend (using
                 Next.js) and backend services, ensuring seamless integration
-                with cloud-native architectures and distributed systems.
+                with cloud-native architectures.
               </p>
             </div>
           </div>

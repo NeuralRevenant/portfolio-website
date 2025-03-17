@@ -46,8 +46,9 @@ const Skills = () => {
                   <FontAwesomeIcon icon={faBrain} /> AI & Machine Learning
                 </h3>
                 <p>
-                  AI/ML, Natural Language Processing, Computer Vision, Machine
-                  Learning, Deep Learning (PyTorch, TensorFlow)
+                  AI/ML, Natural Language Processing (NLP), Retrieval Augmented
+                  Generation (RAG), Computer Vision, Machine Learning, Deep
+                  Learning (PyTorch, TensorFlow)
                 </p>
               </div>
             </div>

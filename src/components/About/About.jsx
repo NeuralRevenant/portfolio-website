@@ -70,10 +70,13 @@ const About = () => {
             <p className="about-me-text">
               I’m proficient in Python, C++, Java, and JavaScript with expertise
               in backend optimization, distributed systems, high-performance
-              computing, concurrent programming, and transformer-based AI
-              systems. My experience spans full-stack development, cloud-native
-              services, LLMs, NLP, Computer Vision, database design, and
-              scalable agentic AI pipelines.
+              computing, asynchronous, multi-threaded/parallel, and concurrent
+              programming, AI systems - Agentic AI & AI agents, Transformers -
+              all types, Deep Learning - ANNs, CNNs, RNNs, GRUs, LSTMs, and
+              more, Computer Vision, CNNs - AlexNet, VGG, ResNet, DenseNet,
+              Vision Transformers, and NLP. My experience spans AI/ML solutions,
+              full-stack development, cloud-native services, database design,
+              and scalable agentic AI pipelines.
             </p>
             <p className="about-me-text clear-float">
               Prior to my MS, I earned my Bachelor's from

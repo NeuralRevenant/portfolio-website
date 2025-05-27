@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faCode } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
@@ -13,6 +13,7 @@ import musicPlayerLogo from "../../assets/images/music.webp";
 import planPulseLogo from "../../assets/images/planpulse.webp";
 import semanticQueryEngineLogo from "../../assets/images/semantic-query-engine.webp";
 import medicalChatbotLogo from "../../assets/images/medical-chatbot.webp";
+import insightAILogo from "../../assets/images/insightAI.png";
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -29,6 +30,34 @@ const Projects = () => {
   }, []);
 
   const projectsData = [
+    {
+      title: "InSightAI (Multimodal Agentic VQA)",
+      logo: insightAILogo,
+      description: [
+        "Built a real-time Visual Question Answering (VQA) system combining vision transformers with LLM-based reasoning over general-purpose images and clinical visual content.",
+        "Integrated an Agentic RAG loop with dynamic GPT-4o planning, enabling the system to reason over multimodal inputs and perform self-refining document + image retrieval across OpenSearch.",
+        "Utilized CLIP ViT-L/14 for visual embeddings and LLaMA-3 8B for response synthesis, fine-tuned for vision-language alignment over the VQAv2 dataset.",
+        "Deployed using FastAPI and GPU-optimized backends, delivering high-throughput VQA inference with support for memory-augmented query refinement and multimodal grounding.",
+      ],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "PyTorch",
+        "Transformers (Hugging Face)",
+        "OpenSearch",
+        "CLIP ViT-L/14",
+        "LLaMA-3 8B",
+        "VQAv2",
+        "Agentic RAG",
+        "ReAct",
+        "Agentic AI",
+        "Vision-Language Models",
+        "Multimodal Fusion",
+        "LLM Planner",
+        "GPU Inference",
+        "Docker",
+      ],
+    },
     {
       title: "Medical Chatbot (Agentic RAG)",
       logo: medicalChatbotLogo,

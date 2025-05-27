@@ -44,7 +44,10 @@ const About = () => {
               Hello! My name is <strong>Kaushik Chaturvedula</strong>. I'm a
               passionate Software Engineer with strong experience building
               high-performance, scalable software systems across microservices,
-              LLM-based agents, and full-stack architectures.
+              AI/ML architectures and solutions, LLMs, Agentic AI & AI agents,
+              and full-stack architectures. I also have experience building
+              low-level systems programming-based projects using modern C++ and
+              C.
             </p>
             <p className="about-me-text">
               I recently graduated with a Master of Science in Computer Science
@@ -62,8 +65,7 @@ const About = () => {
               Full-Stack Development, Operating Systems, HCI, Game Design,
               Algorithm Design, and Software Engineering. I also served as a
               Research Assistant and Teaching Assistant for Programming Language
-              Design, mentoring students and contributing to large-scale
-              computational research.
+              Design, mentoring students and contributing to research.
             </p>
             <p className="about-me-text">
               I’m proficient in Python, C++, Java, and JavaScript with expertise
@@ -74,8 +76,7 @@ const About = () => {
               scalable agentic AI pipelines.
             </p>
             <p className="about-me-text clear-float">
-              Prior to my MS, I earned my Bachelor's in Mechanical Engineering
-              from
+              Prior to my MS, I earned my Bachelor's from
               <strong> NIT Warangal</strong> and worked at{" "}
               <strong>Wibmo</strong> as an Associate Software Engineer, where I
               developed fraud detection systems and event-driven microservices.
@@ -100,8 +101,11 @@ const About = () => {
               <p>GPA: 4.0/4.0</p>
               <p>
                 <strong>Highlights:</strong> Completed 30-credit MS in 3
-                semesters. Top ranker in AI, ML, HPC, and NLP-focused courses.
-                Research and Teaching Assistant roles held.
+                semesters. Top ranker in several of the courses with an
+                extremely good understanding of AI, ML, HPC, multi-threading,
+                parallel processing, operating systems, full-stack, software
+                engineering, and other branches of computer science. Research
+                and Teaching Assistant roles held.
               </p>
             </div>
             <div className="education-item">

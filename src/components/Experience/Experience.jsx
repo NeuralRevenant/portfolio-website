@@ -66,18 +66,23 @@ const Experience = () => {
               <h4 className="experience-company">
                 Medical Informatics Engineering
               </h4>
-              <h4 className="experience-date">January 2025 - Present</h4>
+              <h4 className="experience-date">January 2025 - May 2025</h4>
               <p>
-                At Medical Informatics Engineering, I am developing a Medical
-                Chatbot and a Semantic Query Engine for electronic health
-                records (EHR) using RAG, NLP, LLMs, and transformer models like
-                DistilBERT. My work focuses on query intent classification,
-                OpenSearch vector search, Redis caching, and optimizations to
-                enhance response accuracy and speed. This system powers a
-                medical chatbot that delivers real-time, precise responses to
-                complex queries. Additionally, I design scalable frontend (using
-                Next.js) and backend services, ensuring seamless integration
-                with cloud-native architectures.
+                At Medical Informatics Engineering, I designed and developed a
+                powerful Agentic Medical Chatbot and a Semantic Query Engine for
+                electronic health records (EHR), leveraging Agentic
+                Retrieval-Augmented Generation (Agentic RAG), advanced NLP, and
+                LLM-based planner–executor (ReAct) architectures. I also
+                explored the traditional RAG with NER and intent classification
+                with GPT-4o-driven semantic parsing and multi-hop reasoning. I
+                implemented dynamic query planning, OpenSearch-based hybrid
+                semantic search, and optimized memory-augmented retrieval to
+                enable real-time, context-aware responses to complex medical
+                queries. I also designed and deployed scalable frontend
+                (Next.js) and backend (FastAPI) services, integrating them
+                seamlessly into secure, cloud-native infrastructures using
+                OpenAI-compatible proxy layers and transformer-based embedding
+                models.
               </p>
             </div>
           </div>

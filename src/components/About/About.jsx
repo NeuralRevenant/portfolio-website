@@ -42,48 +42,52 @@ const About = () => {
             <img src={profileImage} alt="Profile" className="profile-image" />
             <p className="about-me-text">
               Hello! My name is <strong>Kaushik Chaturvedula</strong>. I'm a
-              passionate Software Engineer with a year of experience building
-              high-performance, scalable software solutions, including
-              microservices and asynchronous architectures. I am currently
-              pursuing my Master's degree in Computer Science at Purdue
-              University, where I maintain a perfect GPA of 4.0/4.0.
+              passionate Software Engineer with strong experience building
+              high-performance, scalable software systems across microservices,
+              LLM-based agents, and full-stack architectures.
             </p>
             <p className="about-me-text">
-              I am proficient in several programming languages including C++,
-              Python, and Java, with a strong foundation in high-performance
-              computing, distributed systems, full-stack development, systems
-              programming, concurrent programming, socket programming, and
-              backend optimization. My expertise also includes AI/ML, deep
-              learning, Natural Language Processing, Computer Vision,
-              algorithms, data structures, database systems, and cloud
-              computing. I completed my Bachelor's degree in Mechanical
-              Engineering at the National Institute of Technology Warangal,
-              India, after securing an All India Rank of 9227 out of over 1.2
-              million students in the JEE Mains 2018 entrance test.
+              I recently graduated with a Master of Science in Computer Science
+              from
+              <strong> Purdue University Fort Wayne</strong> with a perfect GPA
+              of 4.0/4.0. I completed the 30-credit-hour program in just three
+              semesters, ranking among the top in several advanced courses. My
+              curriculum focused on AI, Machine Learning, full-stack
+              engineering, and scalable systems, combining rigorous theory with
+              extensive hands-on development.
+            </p>
+            <p className="about-me-text">
+              My graduate coursework included: Natural Language Processing,
+              Machine Learning, Computer Vision, High-Performance Computing,
+              Full-Stack Development, Operating Systems, HCI, Game Design,
+              Algorithm Design, and Software Engineering. I also served as a
+              Research Assistant and Teaching Assistant for Programming Language
+              Design, mentoring students and contributing to large-scale
+              computational research.
+            </p>
+            <p className="about-me-text">
+              I’m proficient in Python, C++, Java, and JavaScript with expertise
+              in backend optimization, distributed systems, high-performance
+              computing, concurrent programming, and transformer-based AI
+              systems. My experience spans full-stack development, cloud-native
+              services, LLMs, NLP, Computer Vision, database design, and
+              scalable agentic AI pipelines.
             </p>
             <p className="about-me-text clear-float">
-              During my undergraduate studies, I completed two software development
-              internships in my sophomore and junior years. Currently, as a
-              Research Assistant at Purdue, I contribute to high-performance
-              computational simulations research, manage large datasets ({">"}
-              300 TB), and implement parallel processing techniques. I thrive in
-              collaborative environments and am always seeking new challenges to
-              push the boundaries of technology.
+              Prior to my MS, I earned my Bachelor's in Mechanical Engineering
+              from
+              <strong> NIT Warangal</strong> and worked at{" "}
+              <strong>Wibmo</strong> as an Associate Software Engineer, where I
+              developed fraud detection systems and event-driven microservices.
+              I've also held multiple internships contributing to microservice
+              optimization, database systems, and web platforms.
             </p>
             <p className="about-me-text clear-float">
-              Before my graduate studies, I worked as an Associate Software
-              Engineer at Wibmo (a PayU company). There, I developed and
-              optimized backend services for a Risk-based Authentication Engine,
-              enhancing fraud detection and prevention. I designed and developed
-              microservices and asynchronous architectures to handle
-              high-traffic loads. Beyond my technical skills, I possess strong
-              problem-solving abilities, effective communication skills, and a
-              commitment to continuous learning. I am eager to explore new
-              opportunities where I can leverage my diverse skill set and
-              passion for innovation. If you are seeking a dedicated and
-              accomplished software engineer with a proven track record, I would
-              welcome the opportunity to connect and discuss how I can
-              contribute to your organization's growth and success.
+              My MSCS journey was intense, enriching, and deeply rewarding —
+              sharpening my engineering mindset and preparing me to build
+              impactful AI-driven software. I'm excited to bring this experience
+              to future opportunities where I can innovate, collaborate, and
+              drive meaningful impact.
             </p>
           </div>
 
@@ -91,17 +95,22 @@ const About = () => {
             <h3 className="section-heading">🎓 Education</h3>
             <div className="education-item">
               <h4>Master of Science in Computer Science</h4>
-              <p>Purdue University, Fort Wayne, Indiana</p>
-              <p>January 2024 – Expected May 2025</p>
+              <p>Purdue University Fort Wayne, Indiana</p>
+              <p>January 2024 – May 2025</p>
               <p>GPA: 4.0/4.0</p>
+              <p>
+                <strong>Highlights:</strong> Completed 30-credit MS in 3
+                semesters. Top ranker in AI, ML, HPC, and NLP-focused courses.
+                Research and Teaching Assistant roles held.
+              </p>
             </div>
             <div className="education-item">
               <h4>Bachelor of Technology in Mechanical Engineering</h4>
               <p>National Institute of Technology Warangal, India</p>
               <p>August 2018 – May 2022</p>
               <p>
-                <strong>Achievement:</strong> Ranked <strong>#9227</strong> out of 1.2 million in
-                JEE Mains (2018) entrance test
+                <strong>Achievement:</strong> Ranked <strong>#9227</strong> out
+                of 1.2 million in JEE Mains (2018) entrance test
               </p>
             </div>
           </div>

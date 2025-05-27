@@ -48,7 +48,7 @@ const Skills = () => {
                 <p>
                   AI/ML, Natural Language Processing (NLP), Retrieval Augmented
                   Generation (RAG), Computer Vision, Machine Learning, Deep
-                  Learning (PyTorch, TensorFlow)
+                  Learning (PyTorch, TensorFlow), Agentic AI & AI agents, Model Context Protocol
                 </p>
               </div>
             </div>

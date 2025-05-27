@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.700eeede.css",
-    "main.js": "/portfolio-website/static/js/main.5ef36fbf.js",
+    "main.js": "/portfolio-website/static/js/main.c8755870.js",
     "static/css/951.cde24a3d.chunk.css": "/portfolio-website/static/css/951.cde24a3d.chunk.css",
     "static/js/951.f47e7e58.chunk.js": "/portfolio-website/static/js/951.f47e7e58.chunk.js",
     "static/css/31.6f951b47.chunk.css": "/portfolio-website/static/css/31.6f951b47.chunk.css",
-    "static/js/31.7761da91.chunk.js": "/portfolio-website/static/js/31.7761da91.chunk.js",
+    "static/js/31.3ea0fc6d.chunk.js": "/portfolio-website/static/js/31.3ea0fc6d.chunk.js",
     "static/css/324.30c737b4.chunk.css": "/portfolio-website/static/css/324.30c737b4.chunk.css",
     "static/js/324.8136861d.chunk.js": "/portfolio-website/static/js/324.8136861d.chunk.js",
     "static/css/198.ae646e3a.chunk.css": "/portfolio-website/static/css/198.ae646e3a.chunk.css",
@@ -31,11 +31,11 @@
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
     "main.700eeede.css.map": "/portfolio-website/static/css/main.700eeede.css.map",
-    "main.5ef36fbf.js.map": "/portfolio-website/static/js/main.5ef36fbf.js.map",
+    "main.c8755870.js.map": "/portfolio-website/static/js/main.c8755870.js.map",
     "951.cde24a3d.chunk.css.map": "/portfolio-website/static/css/951.cde24a3d.chunk.css.map",
     "951.f47e7e58.chunk.js.map": "/portfolio-website/static/js/951.f47e7e58.chunk.js.map",
     "31.6f951b47.chunk.css.map": "/portfolio-website/static/css/31.6f951b47.chunk.css.map",
-    "31.7761da91.chunk.js.map": "/portfolio-website/static/js/31.7761da91.chunk.js.map",
+    "31.3ea0fc6d.chunk.js.map": "/portfolio-website/static/js/31.3ea0fc6d.chunk.js.map",
     "324.30c737b4.chunk.css.map": "/portfolio-website/static/css/324.30c737b4.chunk.css.map",
     "324.8136861d.chunk.js.map": "/portfolio-website/static/js/324.8136861d.chunk.js.map",
     "198.ae646e3a.chunk.css.map": "/portfolio-website/static/css/198.ae646e3a.chunk.css.map",
@@ -49,6 +49,6 @@
   },
   "entrypoints": [
     "static/css/main.700eeede.css",
-    "static/js/main.5ef36fbf.js"
+    "static/js/main.c8755870.js"
   ]
 }

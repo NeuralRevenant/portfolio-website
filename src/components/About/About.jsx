@@ -44,9 +44,9 @@ const About = () => {
               Hello! My name is <strong>Kaushik Chaturvedula</strong>. I'm a
               passionate Software Engineer with strong experience building
               high-performance, scalable software systems across microservices,
-              AI/ML architectures & solutions, LLMs, Agentic AI & AI agents,
-              and full-stack architectures. I have also worked on low-level
-              systems programming-based projects using modern C++ and C.
+              AI/ML architectures & solutions, LLMs, Agentic AI & AI agents, and
+              full-stack architectures. I have also worked on low-level systems
+              programming-based projects using modern C++ and C.
             </p>
             <p className="about-me-text">
               I recently graduated with a Master of Science in Computer Science
@@ -80,9 +80,9 @@ const About = () => {
             <p className="about-me-text clear-float">
               Prior to my MS, I earned my Bachelor's from
               <strong> NIT Warangal</strong> and worked at{" "}
-              <strong>Wibmo</strong> as an Associate Software Engineer, where I
-              developed fraud detection systems and event-driven microservices.
-              I've also held multiple internships contributing to microservice
+              <strong>Wibmo</strong> as a Software Engineer, where I developed
+              fraud detection systems and event-driven microservices. I've also
+              held multiple internships contributing to microservice
               optimization, database systems, and web platforms.
             </p>
             <p className="about-me-text clear-float">

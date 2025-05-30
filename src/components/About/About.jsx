@@ -80,7 +80,7 @@ const About = () => {
             <p className="about-me-text clear-float">
               Prior to my MS, I earned my Bachelor's from
               <strong> NIT Warangal</strong> and worked at{" "}
-              <strong>Wibmo</strong> as a Software Engineer, where I developed
+              <strong>Wibmo (a PayU company)</strong> as a Software Engineer, where I developed
               fraud detection systems and event-driven microservices. I've also
               held multiple internships contributing to microservice
               optimization, database systems, and web platforms.

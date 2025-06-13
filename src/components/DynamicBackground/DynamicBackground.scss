@@ -1,0 +1,145 @@
+.dynamic-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(56, 182, 255, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+    linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%);
+  animation: gradientShift 30s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(56, 182, 255, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 40% 80%, rgba(78, 205, 196, 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%);
+  }
+  50% {
+    background: 
+      radial-gradient(circle at 60% 70%, rgba(56, 182, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 30% 30%, rgba(255, 107, 107, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 60%, rgba(78, 205, 196, 0.1) 0%, transparent 50%),
+      linear-gradient(135deg, rgba(13, 13, 13, 0.9) 0%, rgba(26, 26, 26, 0.95) 100%);
+  }
+}
+
+// Simplified grid pattern
+.dynamic-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 100px,
+      rgba(56, 182, 255, 0.02) 100px,
+      rgba(56, 182, 255, 0.02) 101px
+    );
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100px, 0);
+  }
+}
+
+// Floating particles effect
+.dynamic-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(56, 182, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: particleFloat 30s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes particleFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  25% {
+    transform: translate(-20px, -30px) scale(1.1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(0.9);
+    opacity: 0.4;
+  }
+  75% {
+    transform: translate(-10px, 40px) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+// Responsive adjustments for better performance
+@media (max-width: 768px) {
+  .gradient-overlay {
+    animation-duration: 20s; // Faster animation on mobile
+  }
+  
+  .dynamic-background::before {
+    animation-duration: 15s;
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .dynamic-background::before {
+    display: none; // Disable grid animation on very small screens
+  }
+  
+  .gradient-overlay {
+    animation: none; // Disable gradient animation on small screens
+    background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.98) 100%);
+  }
+}
+
+// High performance mode for older devices
+@media (prefers-reduced-motion: reduce) {
+  .gradient-overlay,
+  .dynamic-background::before {
+    animation: none;
+  }
+  
+  .gradient-overlay {
+    background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.98) 100%);
+  }
+} 

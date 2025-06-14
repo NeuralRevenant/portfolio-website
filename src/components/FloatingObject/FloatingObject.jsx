@@ -9,6 +9,7 @@ import {
   faHeadphones,
   faPlane,
   faMicrochip,
+  faRocket,
 } from '@fortawesome/free-solid-svg-icons';
 import './FloatingObject.scss';
 
@@ -27,16 +28,47 @@ const FloatingObject = ({ hide }) => {
     []
   );
 
-  if (hide) return null;
+  // Temporarily disable hide to ensure visibility
+  // if (hide) return null;
 
   return (
     <div className="floating-objects">
+      {/* Debug indicator */}
+      <div style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10px',
+        background: 'red',
+        color: 'white',
+        padding: '5px',
+        zIndex: 9999,
+        fontSize: '12px'
+      }}>
+        FloatingObjects: {icons.length} icons
+      </div>
+      
+      {/* Static test icon */}
+      <FontAwesomeIcon
+        icon={faRocket}
+        style={{
+          position: 'fixed',
+          top: '50px',
+          right: '10px',
+          fontSize: '2rem',
+          color: '#ff0000',
+          zIndex: 9999
+        }}
+      />
+      
       {icons.map(({ icon, size, speed, delay, color }, i) => (
         <FontAwesomeIcon
           key={i}
           icon={icon}
           className={`float ${size} ${speed} ${i % 2 ? 'reverse' : ''} ${!(i % 3) ? 'wave' : ''}`}
-          style={{ animationDelay: `${delay}s`, color }}
+          style={{ 
+            animationDelay: `${delay}s`, 
+            color
+          }}
         />
       ))}
     </div>

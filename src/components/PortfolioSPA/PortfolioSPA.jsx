@@ -367,7 +367,7 @@ const PortfolioSPA = () => {
               ? 'Home'
               : section.charAt(0).toUpperCase() + section.slice(1);
             return (
-              <li key={section}>
+              <li key={section} style={{textAlign: 'center', width: '100%'}}>
                 <button
                   className={`nav-link ${activeSection === section ? 'active' : ''}`}
                   onClick={() => scrollToSection(section)}
@@ -377,7 +377,7 @@ const PortfolioSPA = () => {
               </li>
             );
           })}
-          <li>
+          <li style={{textAlign: 'center', width: '100%'}}>
             <a
               href={`${process.env.PUBLIC_URL}/resume.pdf`}
               download="Kaushik_Chaturvedula_Resume.pdf"

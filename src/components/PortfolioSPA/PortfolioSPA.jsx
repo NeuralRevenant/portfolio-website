@@ -12,7 +12,9 @@ import {
   faBrain,
   faNetworkWired,
   faProjectDiagram,
-  faRocket
+  faRocket,
+  faBars,
+  faTimes
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import DynamicBackground from '../DynamicBackground/DynamicBackground';
@@ -38,6 +40,7 @@ import insightAILogo from "../../assets/images/insightAI.png";
 const PortfolioSPA = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -271,8 +274,38 @@ const PortfolioSPA = () => {
       behavior: 'smooth',
       block: 'start'
     });
+    setIsMobileMenuOpen(false); // Close mobile menu when navigating
     setTimeout(() => setIsScrolling(false), 1000);
   };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMobileMenuOpen && !event.target.closest('.main-nav')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, [isMobileMenuOpen]);
+
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isMobileMenuOpen]);
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -309,13 +342,26 @@ const PortfolioSPA = () => {
       {/* Floating Objects */}
       <FloatingObject hide={activeSection === 'hero'} />
 
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && <div className="mobile-menu-overlay" onClick={() => setIsMobileMenuOpen(false)} />}
+
       {/* Navigation */}
       <nav className="main-nav">
         <div className="nav-brand">
           <FontAwesomeIcon icon={faRocket} />
           <span>Kaushik</span>
         </div>
-        <ul className="nav-links">
+        
+        {/* Mobile Menu Toggle */}
+        <button 
+          className="mobile-menu-toggle"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+        </button>
+        
+        <ul className={`nav-links ${isMobileMenuOpen ? 'nav-links-mobile-open' : ''}`}>
           {Object.keys(sectionRefs).map((section) => {
             const label = section === 'hero'
               ? 'Home'
@@ -485,7 +531,7 @@ const PortfolioSPA = () => {
                 <div className="experience-content">
                   <div className="experience-header">
                     <h3 className="experience-title">
-                      <FontAwesomeIcon icon={faBriefcase} />
+                      <FontAwesomeIcon icon={faBriefcase} style={{marginRight: '5px'}}/>
                       {exp.title}
                     </h3>
                     <h4 className="experience-company">{exp.company}</h4>

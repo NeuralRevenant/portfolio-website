@@ -33,9 +33,9 @@ import mieLogo from "../../assets/images/MIE_logo.webp";
 import lexiPhylaxLogo from "../../assets/images/img1.jpg";
 import swiftNetLogo from "../../assets/images/swiftnet.webp";
 import planPulseLogo from "../../assets/images/planpulse.webp";
-import semanticQueryEngineLogo from "../../assets/images/semantic-query-engine.webp";
-import medicalChatbotLogo from "../../assets/images/medical-chatbot.webp";
+import medicalAssistantLogo from "../../assets/images/medical-assistant.png";
 import insightAILogo from "../../assets/images/insightAI.png";
+import arenaLogo from "../../assets/images/arena-uav.png";
 
 const PortfolioSPA = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -67,6 +67,47 @@ const PortfolioSPA = () => {
   // Memoized data to prevent re-renders
   const projectsData = useMemo(() => [
     {
+      title: "Agentic UAV Telemetry Assistant (Volunteer project with ArenaAI)",
+      logo: arenaLogo,
+      description: [
+        "As part of a volunteer initiative with ArenaAI, built an agentic AI backend to analyze UAV telemetry logs via natural-language chat.",
+        "Implemented a ReAct-style multi-agent architecture (LangGraph + LangChain) with dynamic query planning and step-wise tool execution.",
+        "Integrated short-term buffer, FAISS long-term vector memory, and LLM-driven entity tracking for persistent, context-aware reasoning.",
+        "Used GPT-4o for inference, OpenAI embeddings for indexing, real-time streaming APIs (FastAPI + WebSockets), and a custom Vue.js frontend.",
+      ],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "WebSockets",
+        "Vue.js",
+        "LangChain",
+        "LangGraph",
+        "GPT-4o & OpenAI embeddings",
+        "FAISS",
+        "MAVLink",
+        "ReAct",
+        "Agentic AI",
+      ],
+    },
+    {
+      title: "Medical Assistant (Agentic RAG)",
+      logo: medicalAssistantLogo,
+      description: [
+        "Engineered an advanced Agentic RAG system for real-time natural language querying of EHR and clinical documents.",
+        "Features GPT-powered semantic reasoning, dynamic query planning, and self-refining retrieval loops.",
+        "Scalable FastAPI backend + custom Next.js chatbot UI with hybrid OpenSearch search.",
+      ],
+      technologies: [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "OpenSearch",
+        "LLMs (GPT-4o & OpenAI)",
+        "Hybrid Search",
+        "Agentic RAG",
+      ],
+    },
+    {
       title: "InSightAI (Multimodal Agentic VQA)",
       logo: insightAILogo,
       description: [
@@ -80,38 +121,12 @@ const PortfolioSPA = () => {
       ],
     },
     {
-      title: "Medical Chatbot (Agentic RAG)",
-      logo: medicalChatbotLogo,
-      description: [
-        "Built a powerful agentic conversational AI assistant enabling natural language queries on structured and unstructured EHR and clinical documents.",
-        "Integrated Agentic Retrieval-Augmented Generation (Agentic RAG) using an LLM-based planner → executor loop to reason, retrieve, and synthesize responses over semantically indexed OpenSearch data.",
-        "Initially built a traditional RAG engine and then replaced traditional intent + NER pipelines with GPT-4o-based semantic understanding, enabling self-refining retrieval loops, dynamic tool usage, and clarification-driven conversation.",
-        "Deployed via FastAPI and Next.js with memory-augmented chat, metadata filtering, and hybrid semantic search for real-time physician-facing medical assistance.",
-      ],
-      technologies: [
-        "Python", "Next.js", "FastAPI", "PostgreSQL", "OpenSearch", "PyTorch", "Transformers (Hugging Face)", "Docker", "WebSockets", "Agentic RAG", "ReAct", "Agentic AI", "LLMs (OpenAI, Azure, Hugging Face)", "BlueHiveAI", "Semantic Search", "Metadata Filtering"
-      ],
-    },
-    {
-      title: "Semantic Query Engine (LLM Planner + Hybrid Search)",
-      logo: semanticQueryEngineLogo,
-      description: [
-        "Designed a scalable, context-aware semantic query system tailored for EHR documents, integrating Agentic RAG with hybrid retrieval pipelines.",
-        "Used DistilBERT for intent classification and LLMs for dynamic tool routing between vector similarity, keyword filters, and structured OpenSearch lookups.",
-        "Introduced planner-executor logic with memory-enhanced reasoning, enabling multi-hop medical query decomposition and accurate result synthesis.",
-        "Optimized query speed and precision using embedding tuning, OpenSearch ANN indexing, and dynamic retrieval strategies with BlueHiveAI and Ollama models.",
-      ],
-      technologies: [
-        "Python", "FastAPI", "PyTorch", "Transformers (Hugging Face)", "OpenSearch", "Ollama", "BlueHiveAI", "Redis (legacy)", "Semantic Search", "Hybrid Search", "Agentic AI", "LLM Planner-Executor", "Docker"
-      ],
-    },
-    {
       title: "Lexi-Phylax",
       logo: lexiPhylaxLogo,
       description: [
         "Developed an AI-powered hate speech classification engine leveraging transformer-based models.",
         "Initially trained a BERT-based model from Hugging Face on custom datasets and deployed it for inference.",
-        "Currently building a custom transformer model with ~400M parameters, fine-tuned specifically for nuanced hate speech detection and classification.",
+        "Built a custom transformer model with ~400M parameters, fine-tuned specifically for nuanced hate speech detection and classification.",
         "Optimized model training and evaluation pipelines using advanced techniques in PyTorch, improving accuracy and efficiency.",
       ],
       technologies: [
@@ -153,35 +168,45 @@ const PortfolioSPA = () => {
       company: "Medical Informatics Engineering",
       logo: mieLogo,
       date: "January 2025 - May 2025",
-      description: "At Medical Informatics Engineering, I designed and developed a powerful Agentic Medical Chatbot and a Semantic Query Engine for electronic health records (EHR), leveraging Agentic Retrieval-Augmented Generation (Agentic RAG), advanced NLP, and LLM-based planner–executor (ReAct) architectures."
+      description: [
+        "Designed and built a Retrieval-Augmented Semantic Search (RASS) Engine to enable real-time, intelligent querying of EHR and clinical documents through natural language, empowering healthcare professionals to interact with both structured and unstructured data.",
+        "Developed a scalable FastAPI backend and integrated a Next.js-based chatbot UI for seamless user interaction, supported by OpenSearch, RAG pipelines, LLMs, and NLP techniques.",
+        "Utilized transformer models for query intent classification and NER, and fine-tuned hybrid/semantic retrieval using ANN indices, embedding models, and metadata filtering to boost both accuracy and response speed.",
+        "Integrated Agentic AI capabilities through dynamic query planning and self-refining RAG loops, replacing traditional NER/intent pipelines with GPT-powered semantic reasoning for deeper document understanding.",
+        "Built an LLM proxy layer to dynamically route requests across OpenAI, Azure, and Hugging Face models, enabling flexible model selection and optimized performance across tasks."
+      ],
     },
     {
       title: "Teaching Assistant & Research Assistant",
       company: "Purdue University",
       logo: purdueLogo,
       date: "September 2024 - Jan 2025",
-      description: "As a Teaching Assistant for Programming Language Design, I work closely with professors to deliver course material, grade assignments, and provide academic support. In my Research Assistant role, I contribute to the CosmoSim project on high-performance computational cosmological simulations."
+      description: "As a Teaching Assistant for the Programming Language Design course, I worked closely with the professor to deliver course material, grade assignments, and provide academic support. In my Research Assistant role, I contributed to the CosmoSim research on high-performance computational cosmological simulations dealing with around 300TB of data."
     },
     {
       title: "Associate Software Engineer",
       company: "Wibmo (a PayU company)",
       logo: wibmoLogo,
       date: "July 2022 - April 2023",
-      description: "At Wibmo, I developed and optimized backend services for a Risk-based Authentication Engine, enhancing fraud detection and prevention measures. By designing and implementing a microservices architecture, I improved scalability and system reliability under high-traffic conditions."
+      description: [
+        "Engineered and optimized backend services for a Risk-Based Authentication Engine used in secure payment gateway systems, improving fraud detection for threats like money laundering and BIN attacks.",
+        "Developed robust database migration scripts to ensure seamless data transition from CouchbaseDB to MySQL/MariaDB.",
+        "Designed and implemented scalable, asynchronous microservices using Java (Spring Boot), Node.js, Kafka, RabbitMQ, and MySQL/Couchbase, resulting in a 20% reduction in transaction latency and increased system reliability."
+      ]
     },
     {
       title: "Full Stack Developer Intern",
       company: "Freecharge",
       logo: freechargeLogo,
       date: "May 2021 - July 2021",
-      description: "During my internship at Freecharge, I focused on optimizing the microservices architecture to improve system efficiency and scalability. I led memory caching initiatives, reducing database load and enhancing response times."
+      description: "Developed backend services to support financial transaction systems for banking and payment operations, leveraging Node.js and MongoDB to optimize microservices, enhance caching, and improve load balancing for greater system efficiency and reliability."
     },
     {
       title: "Front-end Developer Intern",
       company: "Ravgins",
       logo: ravginsLogo,
       date: "June 2020 - August 2020",
-      description: "As a Front-End Developer Intern at Ravgins, I built responsive web and mobile applications from the ground up using Angular, Ionic, and other front-end tools, significantly improving user experience and engagement."
+      description: "Designed and built responsive web and mobile interfaces for the influencer marketing platform Wobb from scratch, using modern front-end frameworks and human-computer interaction principles to enhance user engagement and experience."
     }
   ], []);
 
@@ -190,7 +215,45 @@ const PortfolioSPA = () => {
     {
       category: "AI & Machine Learning",
       icon: faBrain,
-      skills: "AI/ML, Natural Language Processing (NLP), Retrieval Augmented Generation (RAG), Computer Vision, Machine Learning, Deep Learning (PyTorch, TensorFlow), Agentic AI & AI agents, Model Context Protocol"
+      subskills: [
+        {
+          title: "Core Areas",
+          items: [
+            "Deep Learning, Classical Machine Learning, Generative AI, Causal Inference",
+            "Reinforcement Learning (RLHF), Meta-Learning, Self-Supervised Learning, Semi-Supervised Learning, Curriculum Learning",
+            "Natural Language Processing, Agentic AI, Model-Context Protocols (MCP), Chain-of-Thought Reasoning, Self-Refining Agents, Model Evaluation & Interpretability"
+          ]
+        },
+        {
+          title: "Retrieval & RAG Systems",
+          items: [
+            "Retrieval-Augmented Generation (RAG)",
+            "Vector Databases (OpenSearch/ElasticSearch, FAISS, Pinecone)",
+            "Semantic Search, Temporal/Context-Aware Retrieval, LangChain-based pipelines"
+          ]
+        },
+        {
+          title: "Computer Vision",
+          items: [
+            "CNNs (AlexNet, VGG, Inception, ResNet, DenseNet)",
+            "Vision & Vision Language Models (ViT, CLIP)",
+            "Image Captioning, Visual Question Answering (VQA), GANs, VAEs, Stable Diffusion"
+          ]
+        },
+        {
+          title: "NLP",
+          items: [
+            "Named Entity Recognition, Text Classification, Question Answering",
+            "Semantic Parsing, Machine Translation, Text Summarization, Document Understanding, Intent Classification"
+          ]
+        },
+        {
+          title: "Frameworks & Tools",
+          items: [
+            "PyTorch, TensorFlow, Hugging Face Transformers, Ray, LangChain, OpenAI APIs, Ollama, Weights & Biases"
+          ]
+        }
+      ]
     },
     {
       category: "Low-Level Development",
@@ -504,14 +567,40 @@ const PortfolioSPA = () => {
       <section id="skills" ref={skillsRef} className="section skills-section">
         <div className="container">
           <h2 className="section-title">🛠 Skills & Expertise</h2>
-          <div className="skills-grid">
+          <div className="skills-masonry-grid">
             {skillsData.map((skill, index) => (
-              <div key={index} className="skill-card" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="skill-icon">
+              <div
+                key={index}
+                className={`skill-tile${index === 0 ? ' skill-tile-large' : ''}`}
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                <div className="skill-icon-large">
                   <FontAwesomeIcon icon={skill.icon} />
                 </div>
                 <h3 className="skill-title">{skill.category}</h3>
-                <p className="skill-description">{skill.skills}</p>
+                {/* Render sub-containers for AI & ML tile, else normal list/desc */}
+                {skill.subskills ? (
+                  <div className="ai-subskills-grid">
+                    {skill.subskills.map((sub, i) => (
+                      <div className="ai-subskill-box" key={i}>
+                        <div className="ai-subskill-title">{sub.title}</div>
+                        <ul className="ai-subskill-list">
+                          {sub.items.map((item, j) => (
+                            <li key={j}>{item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                ) : Array.isArray(skill.skills) ? (
+                  <ul className="skill-list">
+                    {skill.skills.map((item, i) => (
+                      <li key={i}>{item}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="skill-description">{skill.skills}</p>
+                )}
               </div>
             ))}
           </div>
@@ -537,7 +626,15 @@ const PortfolioSPA = () => {
                     <h4 className="experience-company">{exp.company}</h4>
                     <p className="experience-date">{exp.date}</p>
                   </div>
-                  <p className="experience-description">{exp.description}</p>
+                  {Array.isArray(exp.description) ? (
+                    <ul className="experience-description-list">
+                      {exp.description.map((desc, i) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p className="experience-description">{exp.description}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -558,9 +655,15 @@ const PortfolioSPA = () => {
                 <div className="project-content">
                   <h3 className="project-title">{project.title}</h3>
                   <div className="project-description">
-                    {project.description.map((desc, i) => (
-                      <p key={i}>{desc}</p>
-                    ))}
+                    {Array.isArray(project.description) ? (
+                      <ul className="project-description-list">
+                        {project.description.map((desc, i) => (
+                          <li key={i}>{desc}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p>{project.description}</p>
+                    )}
                   </div>
                   <div className="project-technologies">
                     {project.technologies.map((tech, i) => (

@@ -22,7 +22,7 @@ import FloatingObject from '../FloatingObject/FloatingObject';
 import './PortfolioSPA.scss';
 
 // Import images
-import profileImage from "../../assets/images/b_photo.jpeg";
+import profileImage from "../../assets/images/photo.webp";
 import purdueLogo from "../../assets/images/purdue.jpeg";
 import wibmoLogo from "../../assets/images/wibmo.jpg";
 import freechargeLogo from "../../assets/images/freecharge.png";
@@ -241,7 +241,7 @@ const PortfolioSPA = () => {
           ]
         },
         {
-          title: "NLP",
+          title: "Natural Language Processing",
           items: [
             "Named Entity Recognition, Text Classification, Question Answering",
             "Semantic Parsing, Machine Translation, Text Summarization, Document Understanding, Intent Classification"
@@ -543,9 +543,9 @@ const PortfolioSPA = () => {
               </p>
               <p>
                 I recently graduated with a Master of Science in Computer Science
-                from <strong>Purdue University Fort Wayne</strong> with a perfect GPA
+                from <strong>Purdue University</strong> with a perfect GPA
                 of 4.0/4.0. I completed the 30-credit-hour program in just three
-                semesters, ranking among the top in several advanced courses.
+                semesters, ranking at the top in several advanced courses.
               </p>
             </div>
           </div>
@@ -555,11 +555,11 @@ const PortfolioSPA = () => {
             <div className="education-grid">
               <div className="education-item">
                 <h4>Master of Science in Computer Science</h4>
-                <p className="institution">Purdue University Fort Wayne, Indiana</p>
+                <p className="institution">Purdue University, Indiana</p>
                 <p className="date">January 2024 – May 2025</p>
                 <p className="gpa">GPA: 4.0/4.0</p>
                 <p className="highlight">
-                  <strong>Highlights:</strong> Completed 30-credit MS in 3 semesters. 
+                  <strong>Highlights:</strong> Completed 30-credit MS in 3 semesters with a perfect GPA of 4.0 after achieving an A-grade in all courses. 
                   Top ranker in several courses with excellent understanding of AI, ML, 
                   HPC, and software engineering.
                 </p>
@@ -570,7 +570,7 @@ const PortfolioSPA = () => {
                 <p className="date">August 2018 – May 2022</p>
                 <p className="achievement">
                   <strong>Achievement:</strong> Ranked <strong>#9227</strong> out
-                  of 1.2 million in JEE Mains (2018) entrance test
+                  of over 1.2 million in JEE Mains (2018) and a similar top rank in JEE Advanced (2018) entrance tests.
                 </p>
               </div>
             </div>

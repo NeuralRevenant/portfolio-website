@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.4b4e5bf5.css",
-    "main.js": "/portfolio-website/static/js/main.a5df8be2.js",
+    "main.css": "/portfolio-website/static/css/main.9a84cd35.css",
+    "main.js": "/portfolio-website/static/js/main.fa1b859e.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
+    "static/media/arena-uav.png": "/portfolio-website/static/media/arena-uav.60ffb9af5ef818c49f52.png",
     "static/media/insightAI.png": "/portfolio-website/static/media/insightAI.722f99c75909755d74ea.png",
-    "static/media/medical-chatbot.webp": "/portfolio-website/static/media/medical-chatbot.54876806cb7ee9cc765a.webp",
+    "static/media/medical-assistant.png": "/portfolio-website/static/media/medical-assistant.4d7514f4cec491bb80d1.png",
     "static/media/purdue.jpeg": "/portfolio-website/static/media/purdue.a8fab0bdcb2a56552649.jpeg",
     "static/media/ravgins.webp": "/portfolio-website/static/media/ravgins.f2f5f39015f4cb75b1a1.webp",
-    "static/media/semantic-query-engine.webp": "/portfolio-website/static/media/semantic-query-engine.fb8874185aaeb9c37a08.webp",
     "static/media/swiftnet.webp": "/portfolio-website/static/media/swiftnet.f0e182e76c7a3fcdb52c.webp",
     "static/media/planpulse.webp": "/portfolio-website/static/media/planpulse.8edfb9ac68e3b6bf1f2b.webp",
     "static/media/img1.jpg": "/portfolio-website/static/media/img1.4cf084f6432e26bc0e9b.jpg",
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
-    "main.4b4e5bf5.css.map": "/portfolio-website/static/css/main.4b4e5bf5.css.map",
-    "main.a5df8be2.js.map": "/portfolio-website/static/js/main.a5df8be2.js.map",
+    "main.9a84cd35.css.map": "/portfolio-website/static/css/main.9a84cd35.css.map",
+    "main.fa1b859e.js.map": "/portfolio-website/static/js/main.fa1b859e.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b4e5bf5.css",
-    "static/js/main.a5df8be2.js"
+    "static/css/main.9a84cd35.css",
+    "static/js/main.fa1b859e.js"
   ]
 }

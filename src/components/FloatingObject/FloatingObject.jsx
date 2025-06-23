@@ -13,53 +13,28 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import './FloatingObject.scss';
 
-const FloatingObject = ({ hide }) => {
+const FloatingObject = ({ }) => {
   const icons = useMemo(
     () => [
-      { icon: faLaptopCode,  size: 'medium', speed: 'slow',   delay: 0,  color: '#38b6ff' },
-      { icon: faRobot,       size: 'small',  speed: 'medium', delay: 2,  color: '#ff6b6b' },
-      { icon: faHelicopter,  size: 'small',  speed: 'fast',   delay: 4,  color: '#4ecdc4' },
-      { icon: faComputer,    size: 'medium', speed: 'slow',   delay: 6,  color: '#96ceb4' },
-      { icon: faMobile,      size: 'small',  speed: 'fast',   delay: 8,  color: '#ffeaa7' },
-      { icon: faHeadphones,  size: 'small',  speed: 'medium', delay: 10, color: '#98d8c8' },
-      { icon: faPlane,       size: 'medium', speed: 'slow',   delay: 12, color: '#74b9ff' },
-      { icon: faMicrochip,   size: 'small',  speed: 'fast',   delay: 14, color: '#fdcb6e' },
+      { icon: faLaptopCode,  size: 'large', speed: 'slow',   delay: 0,  color: '#38b6ff' },
+      { icon: faRocket,  size: 'large', speed: 'fast',   delay: 1,  color: '#fdcb6e' },
+      { icon: faMicrochip,   size: 'large',  speed: 'medium',   delay: 1, color: '#3fb6ff' },
+      { icon: faRobot,       size: 'large',  speed: 'medium', delay: 2,  color: '#ff6b6b' },
+      { icon: faHelicopter,  size: 'large',  speed: 'fast',   delay: 3,  color: '#4ecdc4' },
+      { icon: faComputer,    size: 'large', speed: 'slow',   delay: 4,  color: '#96ceb4' },
+      { icon: faMobile,      size: 'large',  speed: 'fast',   delay: 5,  color: '#ffeaa7' },
+      { icon: faHeadphones,  size: 'large',  speed: 'medium', delay: 6, color: '#98d8c8' },
+      { icon: faPlane,       size: 'large', speed: 'slow',   delay: 7, color: '#74b9ff' },
+      { icon: faMicrochip,   size: 'large',  speed: 'fast',   delay: 8, color: '#fdcb6e' },
+      { icon: faPlane,       size: 'large', speed: 'slow',   delay: 7, color: '#74b9ff' },
+      { icon: faHeadphones,  size: 'large',  speed: 'medium', delay: 6, color: '#98d8c8' },
+      { icon: faHelicopter,  size: 'large',  speed: 'fast',   delay: 3,  color: '#4ecdc4' },
     ],
     []
   );
 
-  // Temporarily disable hide to ensure visibility
-  // if (hide) return null;
-
   return (
     <div className="floating-objects">
-      {/* Debug indicator */}
-      <div style={{
-        position: 'fixed',
-        top: '10px',
-        right: '10px',
-        background: 'red',
-        color: 'white',
-        padding: '5px',
-        zIndex: 9999,
-        fontSize: '12px'
-      }}>
-        FloatingObjects: {icons.length} icons
-      </div>
-      
-      {/* Static test icon */}
-      <FontAwesomeIcon
-        icon={faRocket}
-        style={{
-          position: 'fixed',
-          top: '50px',
-          right: '10px',
-          fontSize: '2rem',
-          color: '#ff0000',
-          zIndex: 9999
-        }}
-      />
-      
       {icons.map(({ icon, size, speed, delay, color }, i) => (
         <FontAwesomeIcon
           key={i}

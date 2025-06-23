@@ -13,20 +13,25 @@
 .float {
   position: absolute;
   opacity: 0.7; // Always visible
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #38b6ff;
   filter: drop-shadow(0 0 10px currentColor);
   animation: floatAcross 20s linear infinite;
   
   // Ensure icons start from different vertical positions
-  &:nth-child(1) { top: 10%; animation-delay: 0s; }
-  &:nth-child(2) { top: 20%; animation-delay: 2s; }
-  &:nth-child(3) { top: 30%; animation-delay: 4s; }
-  &:nth-child(4) { top: 40%; animation-delay: 6s; }
-  &:nth-child(5) { top: 50%; animation-delay: 8s; }
-  &:nth-child(6) { top: 60%; animation-delay: 10s; }
-  &:nth-child(7) { top: 70%; animation-delay: 12s; }
-  &:nth-child(8) { top: 80%; animation-delay: 14s; }
+  &:nth-child(1) { top: 5%; animation-delay: 0s; }
+  &:nth-child(2) { top: 10%; animation-delay: 1s; }
+  &:nth-child(3) { top: 15%; animation-delay: 2s; }
+  &:nth-child(4) { top: 20%; animation-delay: 3s; }
+  &:nth-child(5) { top: 25%; animation-delay: 4s; }
+  &:nth-child(6) { top: 30%; animation-delay: 5s; }
+  &:nth-child(7) { top: 40%; animation-delay: 6s; }
+  &:nth-child(8) { top: 50%; animation-delay: 6s; }
+  &:nth-child(9) { top: 60%; animation-delay: 6s; }
+  &:nth-child(10) { top: 70%; animation-delay: 6s; }
+  &:nth-child(11) { top: 80%; animation-delay: 6s; }
+  &:nth-child(12) { top: 90%; animation-delay: 6s; }
+  &:nth-child(13) { top: 95%; animation-delay: 6s; }
 }
 
 // Size variations
@@ -106,22 +111,22 @@
 // Mobile responsiveness
 @media (max-width: 768px) {
   .float {
-    font-size: 1rem;
+    font-size: 1.4rem;
     opacity: 0.5;
   }
-  .small { font-size: 0.8rem; }
+  .small { font-size: 1rem; }
   .medium { font-size: 1.2rem; }
 }
 
-@media (max-width: 480px) {
-  .floating-objects {
-    display: none;
-  }
-}
+// @media (max-width: 480px) {
+//   .floating-objects {
+//     display: none;
+//   }
+// }
 
 // Accessibility
-@media (prefers-reduced-motion: reduce) {
-  .floating-objects {
-    display: none;
-  }
-} 
+// @media (prefers-reduced-motion: reduce) {
+//   .floating-objects {
+//     display: none;
+//   }
+// } 

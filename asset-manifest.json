@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.fb4373ac.css",
-    "main.js": "/portfolio-website/static/js/main.8b8c2bfd.js",
+    "main.css": "/portfolio-website/static/css/main.ecf2e291.css",
+    "main.js": "/portfolio-website/static/js/main.2e9aca87.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
     "static/media/arena-uav.png": "/portfolio-website/static/media/arena-uav.60ffb9af5ef818c49f52.png",
     "static/media/insightAI.png": "/portfolio-website/static/media/insightAI.722f99c75909755d74ea.png",
     "static/media/medical-assistant.png": "/portfolio-website/static/media/medical-assistant.4d7514f4cec491bb80d1.png",
+    "static/media/photo.webp": "/portfolio-website/static/media/photo.524eb3df29059e8a0d5f.webp",
     "static/media/purdue.jpeg": "/portfolio-website/static/media/purdue.a8fab0bdcb2a56552649.jpeg",
     "static/media/ravgins.webp": "/portfolio-website/static/media/ravgins.f2f5f39015f4cb75b1a1.webp",
     "static/media/swiftnet.webp": "/portfolio-website/static/media/swiftnet.f0e182e76c7a3fcdb52c.webp",
@@ -13,12 +14,12 @@
     "static/media/img1.jpg": "/portfolio-website/static/media/img1.4cf084f6432e26bc0e9b.jpg",
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
-    "main.fb4373ac.css.map": "/portfolio-website/static/css/main.fb4373ac.css.map",
-    "main.8b8c2bfd.js.map": "/portfolio-website/static/js/main.8b8c2bfd.js.map",
+    "main.ecf2e291.css.map": "/portfolio-website/static/css/main.ecf2e291.css.map",
+    "main.2e9aca87.js.map": "/portfolio-website/static/js/main.2e9aca87.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb4373ac.css",
-    "static/js/main.8b8c2bfd.js"
+    "static/css/main.ecf2e291.css",
+    "static/js/main.2e9aca87.js"
   ]
 }

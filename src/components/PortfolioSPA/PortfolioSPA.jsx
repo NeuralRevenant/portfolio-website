@@ -22,7 +22,7 @@ import FloatingObject from '../FloatingObject/FloatingObject';
 import './PortfolioSPA.scss';
 
 // Import images
-import profileImage from "../../assets/images/purdue.jpeg";
+import profileImage from "../../assets/images/b_photo.jpeg";
 import purdueLogo from "../../assets/images/purdue.jpeg";
 import wibmoLogo from "../../assets/images/wibmo.jpg";
 import freechargeLogo from "../../assets/images/freecharge.png";
@@ -297,6 +297,21 @@ const PortfolioSPA = () => {
     }
   ], []);
 
+  // Dynamic role animation setup
+  const roles = useMemo(() => [
+    "a Computer Scientist",
+    "a Software Engineer",
+    "an AI & ML Engineer"
+  ], []);
+  const [roleIndex, setRoleIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3500); // switch every 3.5s
+    return () => clearInterval(interval);
+  }, [roles.length]);
+
   // Throttled scroll handler for better performance
   const handleScroll = useCallback(() => {
     if (isScrolling) return;
@@ -513,24 +528,24 @@ const PortfolioSPA = () => {
               <img src={profileImage} alt="Profile" className="profile-image" />
             </div>
             <div className="about-text">
+              <h3 className="about-role">Hello, My name is <strong>Kaushik Chaturvedula</strong>. I'm <span key={roleIndex} className="dynamic-role fade-in">{roles[roleIndex]}</span></h3>
               <p>
-                Hello! My name is <strong>Kaushik Chaturvedula</strong>. I'm a
-                passionate Software Engineer with strong experience building
-                high-performance, scalable software systems across microservices,
-                AI/ML architectures & solutions, LLMs, Agentic AI & AI agents, and
-                full-stack architectures.
+                who loves solving hard problems spanning Machine Learning, Computer Vision, NLP, and scalable backend systems.
+              </p>
+              <p>
+                I actively build solutions in generative AI, causal inference, retrieval-augmented generation (RAG), and vision-language modelling using techniques such as GANs, VAEs, CNNs, ViT, and transformer-based VLMs.
+              </p>
+              <p>
+                My work combines prompt-engineering, synthetic-data pipelines, Ray-powered distributed training, and in-house model evaluation to deliver adaptive, production-ready AI systems.
+              </p>
+              <p>
+                Away from code, I'm a polymath deeply curious about robotics, mechanical engineering, biology, and philosophy. I thrive on learning and fusing creativity with technical precision to craft solutions that elevate how we live, think, and connect.
               </p>
               <p>
                 I recently graduated with a Master of Science in Computer Science
                 from <strong>Purdue University Fort Wayne</strong> with a perfect GPA
                 of 4.0/4.0. I completed the 30-credit-hour program in just three
                 semesters, ranking among the top in several advanced courses.
-              </p>
-              <p>
-                My experience spans AI/ML solutions, full-stack development, 
-                cloud-native services, database design, and scalable agentic AI pipelines.
-                I'm excited to bring this experience to future opportunities where I can 
-                innovate, collaborate, and drive meaningful impact.
               </p>
             </div>
           </div>

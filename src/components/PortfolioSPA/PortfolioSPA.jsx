@@ -72,7 +72,7 @@ const PortfolioSPA = () => {
       description: [
         "As part of a volunteer initiative with ArenaAI, built an agentic AI backend to analyze UAV telemetry logs via natural-language chat.",
         "Implemented a ReAct-style multi-agent architecture (LangGraph + LangChain) with dynamic query planning and step-wise tool execution.",
-        "Integrated short-term buffer, FAISS long-term vector memory, and LLM-driven entity tracking for persistent, context-aware reasoning.",
+        "Integrated short-term agentic memory, FAISS-based long-term agentic memory, and LLM-driven entity tracking for persistent, context-aware reasoning.",
         "Used GPT-4o for inference, OpenAI embeddings for indexing, real-time streaming APIs (FastAPI + WebSockets), and a custom Vue.js frontend.",
       ],
       technologies: [

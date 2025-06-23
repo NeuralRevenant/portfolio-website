@@ -1989,4 +1989,64 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin-bottom: 0.5rem;
     }
   }
+
+  // Projects Section mobile fixes
+  @media (max-width: 768px) {
+    .projects-section {
+      overflow-x: hidden;
+      .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+      }
+      .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .projects-section {
+      .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+      }
+      .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0;
+        box-sizing: border-box;
+        .project-content {
+          padding: 1.5rem 1rem;
+        }
+      }
+    }
+  }
+
+  // Center align skill card titles and subtitles
+  .skills-section {
+    .skill-tile {
+      text-align: center;
+      .skill-title {
+        text-align: center;
+      }
+      .skill-list, .skill-description {
+        text-align: left;
+      }
+    }
+    .skill-tile-large {
+      text-align: center;
+      .skill-title {
+        text-align: center;
+      }
+      .ai-subskill-title {
+        text-align: center;
+      }
+      .ai-subskill-list {
+        text-align: left;
+      }
+    }
+  }
 } 

@@ -632,8 +632,8 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         grid-template-columns: repeat(3, 1fr);
       }
       @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-        gap: 1.2rem;
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
       }
     }
 
@@ -1381,8 +1381,6 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
     }
 
-
-
     .skills-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1.5rem;
@@ -1681,7 +1679,16 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
     }
 
-
+    .experience-section {
+      .experience-content {
+        text-align: left !important;
+        width: 100%;
+      }
+      .experience-description-list, .experience-description {
+        text-align: left !important;
+        width: 100%;
+      }
+    }
   }
 
   // Mobile Landscape (576px to 767px)
@@ -1873,8 +1880,6 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
     }
 
-
-
     .footer {
       padding: 1.5rem 0;
       
@@ -1924,6 +1929,64 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .skill-card, .project-card, .experience-item {
       padding: 0.8rem;
+    }
+  }
+
+  // Improved mobile stacking for skills section
+  @media (max-width: 600px) {
+    .skills-section {
+      overflow-x: hidden;
+      .skills-masonry-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.1rem !important;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .skill-tile, .skill-tile-large {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        margin-bottom: 0.7rem;
+        padding: 1.2rem 0.7rem 1.2rem 0.7rem;
+        font-size: 0.97rem;
+        grid-row: auto !important;
+        grid-column: auto !important;
+      }
+      .skill-tile-large {
+        grid-row: auto !important;
+        grid-column: auto !important;
+        .ai-subskills-grid {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 0.7rem !important;
+          width: 100%;
+        }
+        .ai-subskill-box {
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          padding: 0.8rem 0.7rem 0.8rem 0.7rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+
+  // General mobile improvements
+  @media (max-width: 600px) {
+    .skills-section .skill-title,
+    .skills-section .ai-subskill-title {
+      font-size: 1.05rem;
+    }
+    .skills-section .ai-subskill-list,
+    .skills-section .skill-list {
+      font-size: 0.93rem;
+      line-height: 1.5;
+    }
+    .skills-section .ai-subskill-box {
+      margin-bottom: 0.5rem;
     }
   }
 } 

@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.ecf2e291.css",
-    "main.js": "/portfolio-website/static/js/main.2e9aca87.js",
+    "main.js": "/portfolio-website/static/js/main.61f17a4f.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
     "static/media/arena-uav.png": "/portfolio-website/static/media/arena-uav.60ffb9af5ef818c49f52.png",
     "static/media/insightAI.png": "/portfolio-website/static/media/insightAI.722f99c75909755d74ea.png",
@@ -15,11 +15,11 @@
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
     "main.ecf2e291.css.map": "/portfolio-website/static/css/main.ecf2e291.css.map",
-    "main.2e9aca87.js.map": "/portfolio-website/static/js/main.2e9aca87.js.map",
+    "main.61f17a4f.js.map": "/portfolio-website/static/js/main.61f17a4f.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ecf2e291.css",
-    "static/js/main.2e9aca87.js"
+    "static/js/main.61f17a4f.js"
   ]
 }

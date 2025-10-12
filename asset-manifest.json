@@ -1,25 +1,27 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.ecf2e291.css",
-    "main.js": "/portfolio-website/static/js/main.61f17a4f.js",
+    "main.css": "/portfolio-website/static/css/main.40e6bc2b.css",
+    "main.js": "/portfolio-website/static/js/main.4f74e0cc.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
-    "static/media/arena-uav.png": "/portfolio-website/static/media/arena-uav.60ffb9af5ef818c49f52.png",
+    "static/media/cancer_classification.png": "/portfolio-website/static/media/cancer_classification.b90f965819f5297f66fa.png",
+    "static/media/uav_assistant.png": "/portfolio-website/static/media/uav_assistant.7fa78ea1bdc8aab5156b.png",
+    "static/media/balance.png": "/portfolio-website/static/media/balance.656ac1fa462457e536ae.png",
+    "static/media/planpulse.png": "/portfolio-website/static/media/planpulse.2845e792515401e4a90b.png",
+    "static/media/swiftnet.png": "/portfolio-website/static/media/swiftnet.4d5bf979a9df27775fa2.png",
     "static/media/insightAI.png": "/portfolio-website/static/media/insightAI.722f99c75909755d74ea.png",
     "static/media/medical-assistant.png": "/portfolio-website/static/media/medical-assistant.4d7514f4cec491bb80d1.png",
+    "static/media/obj_det.png": "/portfolio-website/static/media/obj_det.060a9199e947f2ffc5e7.png",
     "static/media/photo.webp": "/portfolio-website/static/media/photo.524eb3df29059e8a0d5f.webp",
     "static/media/purdue.jpeg": "/portfolio-website/static/media/purdue.a8fab0bdcb2a56552649.jpeg",
     "static/media/ravgins.webp": "/portfolio-website/static/media/ravgins.f2f5f39015f4cb75b1a1.webp",
-    "static/media/swiftnet.webp": "/portfolio-website/static/media/swiftnet.f0e182e76c7a3fcdb52c.webp",
-    "static/media/planpulse.webp": "/portfolio-website/static/media/planpulse.8edfb9ac68e3b6bf1f2b.webp",
-    "static/media/img1.jpg": "/portfolio-website/static/media/img1.4cf084f6432e26bc0e9b.jpg",
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
-    "main.ecf2e291.css.map": "/portfolio-website/static/css/main.ecf2e291.css.map",
-    "main.61f17a4f.js.map": "/portfolio-website/static/js/main.61f17a4f.js.map",
+    "main.40e6bc2b.css.map": "/portfolio-website/static/css/main.40e6bc2b.css.map",
+    "main.4f74e0cc.js.map": "/portfolio-website/static/js/main.4f74e0cc.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecf2e291.css",
-    "static/js/main.61f17a4f.js"
+    "static/css/main.40e6bc2b.css",
+    "static/js/main.4f74e0cc.js"
   ]
 }

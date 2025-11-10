@@ -1,0 +1,44 @@
+html,
+body,
+#root {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: radial-gradient(circle at center, #000000, #222, #555);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* color: #eaeaea; */
+}
+
+.corner-icon {
+  position: fixed;
+  opacity: 0.1;
+  color: #38b6ff;
+  pointer-events: none;
+  font-size: clamp(4rem, 8vw, 6rem);
+  z-index: 0;
+  transition: opacity 1s ease;
+}
+.corner-icon.top-left {
+  top: 10px;
+  left: 10px;
+}
+.corner-icon.top-right {
+  top: 10px;
+  right: 10px;
+}
+.corner-icon.bottom-left {
+  bottom: 10px;
+  left: 10px;
+}
+.corner-icon.bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .corner-icon {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

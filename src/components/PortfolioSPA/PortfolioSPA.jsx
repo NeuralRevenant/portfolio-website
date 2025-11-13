@@ -31,12 +31,12 @@ import mieLogo from "../../assets/images/MIE_logo.webp";
 // Project images
 import InsightAILogo from "../../assets/images/insightAI.png";
 import HumanoidLogo from "../../assets/images/balance.png";
-import ObjectDetectionLogo from "../../assets/images/obj_det.png";
+import DeepSightLogo from "../../assets/images/obj_det.png";
 import CancerClassificationLogo from "../../assets/images/cancer_classification.png";
 import UAVAssistantLogo from "../../assets/images/uav_assistant.png";
 import SwiftNetLogo from "../../assets/images/swiftnet.png";
 import PlanPulseLogo from "../../assets/images/planpulse.png";
-
+import ClinicaLogo from "../../assets/images/clinica.png";
 
 const PortfolioSPA = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -70,6 +70,22 @@ const PortfolioSPA = () => {
   const projectsData = useMemo(
     () => [
       {
+        title: "Clinica (Kiroween Hackathon)",
+        logo: ClinicaLogo,
+        description:
+          "Intelligent medical assistant and full-stack platform built during the Kiroween hackathon for querying and analyzing medical/EHR data via natural language, combining FHIR APIs, agentic AI reasoning, and interactive graph visualizations to deliver secure, HIPAA-aligned insights.",
+        technologies: [
+          "Next.js",
+          "FastAPI",
+          "FHIR",
+          "Neo4j",
+          "Agentic AI",
+          "Graph Visualizations",
+          "HIPAA Compliance",
+        ],
+        highlights: ["Hackathon Project", "FHIR APIs", "Agentic Reasoning"],
+      },
+      {
         title: "Humanoid Balance and Locomotion via Deep Reinforcement Learning",
         logo: HumanoidLogo,
         description:
@@ -84,10 +100,10 @@ const PortfolioSPA = () => {
         highlights: ["Reinforcement Learning", "Policy Optimization", "Adaptive Gait Learning"],
       },
       {
-        title: "Object Detection and Semantic + Instance Segmentation",
-        logo: ObjectDetectionLogo,
+        title: "DeepSight",
+        logo: DeepSightLogo,
         description:
-          "Building advanced architectures like Mask R-CNN, FC-DenseNet, and Mask2Former using transfer learning and fine-tuning to improve mAP accuracy, boundary precision, and pixel-level segmentation performance.",
+          "Building advanced architectures like Mask R-CNN, FC-DenseNet, and Mask2Former for context-aware image segmentation to improve mAP accuracy, boundary precision, and pixel-level performance.",
         technologies: [
           "PyTorch",
           "Mask R-CNN",
@@ -96,7 +112,7 @@ const PortfolioSPA = () => {
           "Transfer Learning",
           "Computer Vision",
         ],
-        highlights: ["Instance Segmentation", "Transfer Learning", "High mAP Accuracy"],
+        highlights: ["Instance Segmentation", "Context-Aware Modeling", "High mAP Accuracy"],
       },
       {
         title: "Cancer Classification using CNN",
@@ -166,17 +182,18 @@ const PortfolioSPA = () => {
         title: "PlanPulse (Task Management)",
         logo: PlanPulseLogo,
         description:
-          "Collaborative task management platform with layered architecture, JWT authentication, and Docker containerization on Google Cloud Run with MongoDB storage.",
+          "Developed a cloud-native task management system with layered architecture and microservices for real-time collaboration. Implemented JWT authentication, Redis caching, and Dockerized deployment on Google Cloud Run with Spring Boot, React, and MongoDB, ensuring scalability, modularity, and secure access control.",
         technologies: [
           "React",
           "Spring Boot",
           "MongoDB",
           "Redis",
-          "GCP",
+          "Google Cloud Run",
           "Docker",
           "JWT",
+          "Microservices",
         ],
-        highlights: ["Microservices", "Cloud-Native", "Real-time Collaboration"],
+        highlights: ["Cloud-Native", "Real-time Collaboration", "Secure Access Control"],
       },
     ],
     []
@@ -189,32 +206,18 @@ const PortfolioSPA = () => {
         title: "Software Developer",
         company: "Medical Informatics Engineering",
         logo: mieLogo,
-        date: "June 2025 – Present",
-        location: "Remote",
+        date: "January 2025 – October 2025",
+        location: "Fort Wayne, Indiana, United States · Remote",
         type: "Full-time",
         description:
-          "Developing next-generation AI-driven backend infrastructure powering MIE's core enterprise healthcare platforms — including BlueHive, Ozwell, and WebChart — by combining robust system design with Agentic AI, RAG pipelines, and scalable cloud architectures.",
+          "Developed AI-driven backend infrastructure powering MIE's enterprise healthcare platforms — BlueHive, Ozwell, and WebChart — by combining scalable system design with RAG pipelines, intelligent automation, and cloud-native architectures.",
         achievements: [
-          "Built production-grade healthcare software systems to enhance clinical workflows and enable intelligent access to medical and EHR data using Agentic AI, Model-Context Protocol (MCP), and Retrieval-Augmented Generation (RAG) engines, enabling real-time querying, document ingestion, contextual understanding, large-scale information retrieval.",
-          "Architected full-stack pipelines with Node.js/Fastify, FastAPI, and Next.js, integrating MongoDB, MariaDB, and OpenSearch to handle high-throughput ingestion and low-latency retrieval with strict reliability guarantees.",
-          "Developed C components for WebChart, MIE's enterprise EHR platform, to sustain real-time interactions and ensure reliable clinical performance. Contributed key features to BlueHive, one of MIE's core products, using Fastify, Meteor, and TypeScript/JavaScript, and integrated agentic AI–powered enhancements into Ozwell to extend backend functionality with LLM-powered dynamic planning and intelligent workflow automation.",
-        ],
-      },
-      {
-        title: "Software Developer",
-        company: "Medical Informatics Engineering",
-        logo: mieLogo,
-        date: "January 2025 – May 2025",
-        location: "Fort Wayne, Indiana",
-        type: "Internship",
-        description:
-          "Prototyped AI-powered healthcare solutions and built foundational systems that later transitioned into MIE's production enterprise platforms.",
-        achievements: [
-          "Prototyped an Agentic AI–powered RAG engine and medical chatbot enabling real-time natural language interaction with EHR and clinical documents through semantic search, reasoning, and interactive exploration.",
-          "Designed a Retrieval-Augmented Semantic Search (RASS) system for structured and unstructured medical records, combining transformer-based embeddings, hybrid retrieval, and contextual reranking for accurate information access.",
-          "Built a full-stack prototype using FastAPI, PostgreSQL, Redis, and Next.js for live chat, authentication, and document ingestion, later serving as the foundation for production deployment in MIE's enterprise products.",
-          "Experimented with transformer-based intent classification (BERT/DistilBERT) and Named Entity Recognition (NER) for query understanding, contributing to model evaluation and retrieval optimization.",
-          "Developed an LLM proxy layer to dynamically route requests between OpenAI, Azure, and Hugging Face models, optimizing latency and cost efficiency across diverse medical NLP workloads.",
+          "Built production-grade healthcare software systems to enhance clinical workflows and enable intelligent access to medical and EHR data using Agentic AI, Model-Context Protocol (MCP), and Retrieval-Augmented Generation (RAG) engines, enabling real-time querying, document ingestion, contextual understanding, and large-scale information retrieval.",
+          "Architected full-stack pipelines with Node.js/Fastify, FastAPI, and Next.js, integrating MongoDB, relational databases, and OpenSearch to handle high-throughput ingestion and low-latency retrieval with strict reliability guarantees.",
+          "Developed C components for WebChart, MIE's enterprise EHR platform, to sustain real-time interactions and ensure reliable clinical performance. Contributed key features to BlueHive using Fastify, Meteor, and TypeScript/JavaScript, and integrated agentic AI-powered enhancements into Ozwell to extend backend functionality with LLM-powered dynamic planning, reasoning, and intelligent workflow automation.",
+          "Prototyped a RAG-powered chatbot, enabling natural-language interaction with structured and unstructured clinical data through transformer-based embeddings and contextual reranking.",
+          "Implemented an LLM proxy layer to dynamically route requests between OpenAI, Azure, and Hugging Face, optimizing latency and inference costs.",
+          "Collaborated across product teams to transition prototypes into reliable, production-ready deployments while maintaining HIPAA compliance and system resilience.",
         ],
       },
       {
@@ -222,10 +225,10 @@ const PortfolioSPA = () => {
         company: "Purdue University",
         logo: purdueLogo,
         date: "September 2024 – January 2025",
-        location: "Fort Wayne, Indiana",
+        location: "Fort Wayne, Indiana, United States · On-site",
         type: "Part-time",
         description:
-          "Programming Language Design Course: Assisting professors in delivering course material, grading assignments, and providing academic support to students. Involved in enhancing the overall educational experience for students through various teaching-related tasks.",
+          "Programming Language Design Course: Assisted in delivering course material, grading assignments, and providing academic support to students. Involved in enhancing the overall educational experience for students through various teaching-related tasks.",
         achievements: [],
       },
       {
@@ -233,11 +236,11 @@ const PortfolioSPA = () => {
         company: "Purdue University",
         logo: purdueLogo,
         date: "September 2024 – January 2025",
-        location: "Fort Wayne, Indiana",
+        location: "Fort Wayne, Indiana, United States",
         type: "Part-time",
-        description: "",
+        description:
+          "Contributed to high-performance computational cosmological simulations (CosmoSim) research handling 300TB datasets.",
         achievements: [
-          "Contributed to high-performance computational cosmological simulations (CosmoSim) research using Python, handling datasets >300TB.",
           "Implemented parallel processing techniques to improve performance in HPC environments.",
         ],
       },
@@ -246,16 +249,15 @@ const PortfolioSPA = () => {
         company: "Wibmo (a PayU company)",
         logo: wibmoLogo,
         date: "July 2022 – April 2023",
-        location: "Bengaluru, Karnataka, India",
+        location: "Bengaluru, Karnataka, India · Hybrid",
         type: "Full-time",
         description:
-          "Engineered backend services for a Risk-Based Authentication Engine powering secure payment gateway systems, strengthening fraud detection against money laundering and BIN attacks.",
+          "Designed, developed, and tested scalable Java Spring Boot and Node.js microservices for a Risk-Based Authentication system securing global payment gateways, improving fraud detection and overall platform reliability.",
         achievements: [
-          "Architected and implemented scalable microservices to handle high-traffic loads, enhancing system reliability, scalability, and performance under peak demand.",
-          "Developed database migration pipelines ensuring seamless data transition from CouchbaseDB to MariaDB with zero downtime.",
-          "Optimized transaction workflows and asynchronous processing, reducing latency by 20% and improving throughput.",
-          "Built and tested event-driven, fault-tolerant microservices using Spring Boot, Node.js, Kafka, RabbitMQ, and MySQL/Couchbase, ensuring secure, high-performance transaction handling.",
-          "Collaborated cross-functionally to improve development workflows, testing efficiency, and delivery of production-grade software.",
+          "Architected, implemented, and validated event-driven microservices using Kafka, RabbitMQ, and MySQL/Couchbase, reducing transaction latency by 20% under high-volume workloads.",
+          "Built robust database migration pipelines from CouchbaseDB to MariaDB, ensuring data consistency and zero downtime during deployment.",
+          "Enhanced transaction workflows and asynchronous processing to boost scalability, throughput, and system resilience.",
+          "Collaborated across QA and DevOps teams to automate testing, streamline CI/CD pipelines, and deliver secure, production-grade releases.",
         ],
       },
       {
@@ -263,14 +265,14 @@ const PortfolioSPA = () => {
         company: "Freecharge",
         logo: freechargeLogo,
         date: "May 2021 – July 2021",
-        location: "Mumbai, Maharashtra, India",
+        location: "Mumbai, Maharashtra, India · Remote",
         type: "Internship",
         description:
-          "Developed backend services for financial transaction systems, leveraging Node.js and MongoDB to optimize microservice architectures and improve system performance and reliability.",
+          "Contributed to backend development of financial transaction systems, focusing on reliability, scalability, and secure payments. Built and optimized microservices using Node.js, Express.js, and MongoDB, improving overall system performance and code maintainability.",
         achievements: [
-          "Optimized microservices architecture for better system efficiency and scalability.",
-          "Led memory caching initiatives, reducing database load and boosting performance.",
-          "Implemented load balancing to optimize resource allocation and ensure system reliability.",
+          "Improved system efficiency and scalability by redesigning the microservices architecture.",
+          "Implemented in-memory caching and load balancing strategies, reducing database load and ensuring stable, high-throughput transactions.",
+          "Collaborated with senior developers to enhance fault tolerance and streamline backend workflows for production reliability.",
         ],
       },
       {
@@ -278,13 +280,13 @@ const PortfolioSPA = () => {
         company: "Ravgins",
         logo: ravginsLogo,
         date: "June 2020 – August 2020",
-        location: "New Delhi, India",
+        location: "New Delhi, India · Remote",
         type: "Internship",
         description:
-          "Designed and built responsive web and mobile interfaces for the influencer marketing platform Wobb from scratch, using modern front-end frameworks and human-computer interaction principles to enhance user engagement and experience.",
+          "Designed and developed responsive web and mobile interfaces for Wobb, an influencer marketing platform, using React, Angular, and Ionic. Focused on creating clean, intuitive UIs and seamless user experiences across devices.",
         achievements: [
-          "Developed web and mobile apps using Angular, Ionic, Bootstrap, HTML, CSS, JavaScript, TypeScript, React, and other front-end tools & frameworks, enhancing user experience.",
-          "Built full-stack platforms with responsive design, improving functionality and interaction.",
+          "Built and optimized full-stack components with modern front-end frameworks, HTML, CSS, and JavaScript/TypeScript to enhance engagement and usability.",
+          "Implemented responsive design principles that improved interaction quality and cross-platform performance.",
           "Collaborated with a cross-functional team to deliver projects on time, aligning with objectives.",
         ],
       },

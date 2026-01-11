@@ -27,6 +27,7 @@ import wibmoLogo from "../../assets/images/wibmo.jpg";
 import freechargeLogo from "../../assets/images/freecharge.png";
 import ravginsLogo from "../../assets/images/ravgins.webp";
 import mieLogo from "../../assets/images/MIE_logo.webp";
+import vistexLogo from "../../assets/images/vistex_logo.jpeg";
 
 // Project images
 import InsightAILogo from "../../assets/images/insightAI.png";
@@ -203,21 +204,32 @@ const PortfolioSPA = () => {
   const experienceData = useMemo(
     () => [
       {
+        title: "Data Scientist",
+        company: "Vistex",
+        logo: vistexLogo,
+        date: "November 2025 – Present",
+        location: "Hoffman Estates, Illinois, U.S.",
+        type: "Internship",
+        description:
+          "Developing machine learning and data science pipelines to analyze revenue flows and optimize financial strategies for enterprise clients.",
+        achievements: [
+          "Built ML/data science pipelines using GCP, BigQuery, and Vertex AI to analyze revenue flows and optimize financial strategies for enterprise clients with generative AI-based analysis and insights.",
+        ],
+      },
+      {
         title: "Software Developer",
         company: "Medical Informatics Engineering",
         logo: mieLogo,
         date: "January 2025 – October 2025",
-        location: "Fort Wayne, Indiana, United States · Remote",
+        location: "Fort Wayne, Indiana, U.S.",
         type: "Full-time",
         description:
-          "Developed AI-driven backend infrastructure powering MIE's enterprise healthcare platforms — BlueHive, Ozwell, and WebChart — by combining scalable system design with RAG pipelines, intelligent automation, and cloud-native architectures.",
+          "Built and optimized production-grade healthcare platforms by developing high-performance backend services and integrating agentic AI tools for real-time clinical interactions and intelligent EHR data retrieval.",
         achievements: [
-          "Built production-grade healthcare software systems to enhance clinical workflows and enable intelligent access to medical and EHR data using Agentic AI, Model-Context Protocol (MCP), and Retrieval-Augmented Generation (RAG) engines, enabling real-time querying, document ingestion, contextual understanding, and large-scale information retrieval.",
+          "Built and optimized healthcare platforms (WebChart, BlueHive, Ozwell) by developing high-performance backend services and integrating agentic AI tools (RAG, MCP, LLM-based planning) to enable real-time clinical interactions, intelligent EHR data retrieval, and scalable workflow automation.",
           "Architected full-stack pipelines with Node.js/Fastify, FastAPI, and Next.js, integrating MongoDB, relational databases, and OpenSearch to handle high-throughput ingestion and low-latency retrieval with strict reliability guarantees.",
-          "Developed C components for WebChart, MIE's enterprise EHR platform, to sustain real-time interactions and ensure reliable clinical performance. Contributed key features to BlueHive using Fastify, Meteor, and TypeScript/JavaScript, and integrated agentic AI-powered enhancements into Ozwell to extend backend functionality with LLM-powered dynamic planning, reasoning, and intelligent workflow automation.",
-          "Prototyped a RAG-powered chatbot, enabling natural-language interaction with structured and unstructured clinical data through transformer-based embeddings and contextual reranking.",
-          "Implemented an LLM proxy layer to dynamically route requests between OpenAI, Azure, and Hugging Face, optimizing latency and inference costs.",
-          "Collaborated across product teams to transition prototypes into reliable, production-ready deployments while maintaining HIPAA compliance and system resilience.",
+          "Led migration of a large API suite from a legacy Meteor platform to Node.js/Fastify, increasing system speed and developer efficiency while meeting tight deadlines.",
+          "Collaborated with cross-functional engineering teams to define platform standards and improve internal development workflows.",
         ],
       },
       {
@@ -225,7 +237,6 @@ const PortfolioSPA = () => {
         company: "Purdue University",
         logo: purdueLogo,
         date: "September 2024 – January 2025",
-        location: "Fort Wayne, Indiana, United States · On-site",
         type: "Part-time",
         description:
           "Programming Language Design Course: Assisted in delivering course material, grading assignments, and providing academic support to students. Involved in enhancing the overall educational experience for students through various teaching-related tasks.",
@@ -236,7 +247,6 @@ const PortfolioSPA = () => {
         company: "Purdue University",
         logo: purdueLogo,
         date: "September 2024 – January 2025",
-        location: "Fort Wayne, Indiana, United States",
         type: "Part-time",
         description:
           "Contributed to high-performance computational cosmological simulations (CosmoSim) research handling 300TB datasets.",
@@ -249,14 +259,14 @@ const PortfolioSPA = () => {
         company: "Wibmo (a PayU company)",
         logo: wibmoLogo,
         date: "July 2022 – April 2023",
-        location: "Bengaluru, Karnataka, India · Hybrid",
+        location: "Bengaluru, India",
         type: "Full-time",
         description:
-          "Designed, developed, and tested scalable Java Spring Boot and Node.js microservices for a Risk-Based Authentication system securing global payment gateways, improving fraud detection and overall platform reliability.",
+          "Designed, developed, and tested distributed backend services for a Risk-Based Authentication system securing global payment gateways, improving fraud detection and overall platform reliability.",
         achievements: [
-          "Architected, implemented, and validated event-driven microservices using Kafka, RabbitMQ, and MySQL/Couchbase, reducing transaction latency by 20% under high-volume workloads.",
+          "Designed and implemented scalable cloud-native Java Spring Boot and Node.js based distributed microservices for a Risk-Based Authentication engine used in global payment systems, improving fraud detection, system reliability, and strengthening throughput handling.",
+          "Developed event-driven services using Kafka and RabbitMQ to support asynchronous workflows and low-latency transaction processing, reducing average transaction latency by around 20% in production",
           "Built robust database migration pipelines from CouchbaseDB to MariaDB, ensuring data consistency and zero downtime during deployment.",
-          "Enhanced transaction workflows and asynchronous processing to boost scalability, throughput, and system resilience.",
           "Collaborated across QA and DevOps teams to automate testing, streamline CI/CD pipelines, and deliver secure, production-grade releases.",
         ],
       },
@@ -265,22 +275,21 @@ const PortfolioSPA = () => {
         company: "Freecharge",
         logo: freechargeLogo,
         date: "May 2021 – July 2021",
-        location: "Mumbai, Maharashtra, India · Remote",
+        location: "Mumbai, India",
         type: "Internship",
         description:
-          "Contributed to backend development of financial transaction systems, focusing on reliability, scalability, and secure payments. Built and optimized microservices using Node.js, Express.js, and MongoDB, improving overall system performance and code maintainability.",
+          "Built scalable financial transaction APIs and modular microservices to support secure, fault-tolerant payment workflows.",
         achievements: [
-          "Improved system efficiency and scalability by redesigning the microservices architecture.",
-          "Implemented in-memory caching and load balancing strategies, reducing database load and ensuring stable, high-throughput transactions.",
-          "Collaborated with senior developers to enhance fault tolerance and streamline backend workflows for production reliability.",
+          "Built scalable financial transaction APIs with Node.js/Express.js and MongoDB, enhancing efficiency and maintainability.",
+          "Developed modular microservices with Docker and AWS ECS to handle secure, fault-tolerant payment workflows, reducing transaction failures and improving reliability.",
         ],
       },
       {
-        title: "Frontend Developer",
+        title: "Front-end Developer",
         company: "Ravgins",
         logo: ravginsLogo,
         date: "June 2020 – August 2020",
-        location: "New Delhi, India · Remote",
+        location: "New Delhi, India",
         type: "Internship",
         description:
           "Designed and developed responsive web and mobile interfaces for Wobb, an influencer marketing platform, using React, Angular, and Ionic. Focused on creating clean, intuitive UIs and seamless user experiences across devices.",
@@ -452,7 +461,7 @@ const PortfolioSPA = () => {
                 ? "Home"
                 : section.charAt(0).toUpperCase() + section.slice(1);
             return (
-              <li key={section} style={{ textAlign: "center", width: "100%" }}>
+              <li key={section}>
                 <button
                   className={`nav-link ${
                     activeSection === section ? "active" : ""
@@ -464,15 +473,6 @@ const PortfolioSPA = () => {
               </li>
             );
           })}
-          <li style={{ textAlign: "center", width: "100%" }}>
-            <a
-              href={`${process.env.PUBLIC_URL}/resume.pdf`}
-              download="Kaushik_Chaturvedula_Resume.pdf"
-              className="nav-link resume-link"
-            >
-              Resume
-            </a>
-          </li>
         </ul>
       </nav>
 
@@ -617,13 +617,23 @@ const PortfolioSPA = () => {
                         />
                         {exp.title}
                       </h3>
-                      <span className="experience-type">{exp.type}</span>
+                      <span
+                        className={`experience-type ${
+                          exp.type === "Internship" ? "experience-type-internship" : ""
+                        }`}
+                      >
+                        {exp.type}
+                      </span>
                     </div>
                     <h4 className="experience-company">{exp.company}</h4>
                     <div className="experience-meta">
                       <p className="experience-date">{exp.date}</p>
-                      <span className="meta-separator">•</span>
-                      <p className="experience-location">{exp.location}</p>
+                      {exp.location ? (
+                        <>
+                          <span className="meta-separator">•</span>
+                          <p className="experience-location">{exp.location}</p>
+                        </>
+                      ) : null}
                     </div>
                   </div>
                   <p className="experience-description">{exp.description}</p>

@@ -1,11 +1,10 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.4b97e5a1.css",
-    "main.js": "/portfolio-website/static/js/main.c6268ab4.js",
+    "main.js": "/portfolio-website/static/js/main.db218c4b.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
     "static/media/cancer_classification.png": "/portfolio-website/static/media/cancer_classification.b90f965819f5297f66fa.png",
     "static/media/uav_assistant.png": "/portfolio-website/static/media/uav_assistant.7fa78ea1bdc8aab5156b.png",
-    "static/media/balance.png": "/portfolio-website/static/media/balance.656ac1fa462457e536ae.png",
     "static/media/planpulse.png": "/portfolio-website/static/media/planpulse.2845e792515401e4a90b.png",
     "static/media/swiftnet.png": "/portfolio-website/static/media/swiftnet.4d5bf979a9df27775fa2.png",
     "static/media/insightAI.png": "/portfolio-website/static/media/insightAI.722f99c75909755d74ea.png",
@@ -17,11 +16,11 @@
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
     "main.4b97e5a1.css.map": "/portfolio-website/static/css/main.4b97e5a1.css.map",
-    "main.c6268ab4.js.map": "/portfolio-website/static/js/main.c6268ab4.js.map",
+    "main.db218c4b.js.map": "/portfolio-website/static/js/main.db218c4b.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4b97e5a1.css",
-    "static/js/main.c6268ab4.js"
+    "static/js/main.db218c4b.js"
   ]
 }

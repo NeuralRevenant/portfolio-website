@@ -31,7 +31,6 @@ import vistexLogo from "../../assets/images/vistex_logo.jpeg";
 
 // Project images
 import InsightAILogo from "../../assets/images/insightAI.png";
-import HumanoidLogo from "../../assets/images/balance.png";
 import DeepSightLogo from "../../assets/images/obj_det.png";
 import CancerClassificationLogo from "../../assets/images/cancer_classification.png";
 import UAVAssistantLogo from "../../assets/images/uav_assistant.png";
@@ -85,20 +84,6 @@ const PortfolioSPA = () => {
           "HIPAA Compliance",
         ],
         highlights: ["Hackathon Project", "FHIR APIs", "Agentic Reasoning"],
-      },
-      {
-        title: "Humanoid Balance and Locomotion via Deep Reinforcement Learning",
-        logo: HumanoidLogo,
-        description:
-          "Developing a simulated humanoid control system using PPO and MDP frameworks to achieve dynamic balance and adaptive gait learning in physics-based environments. Designed reward shaping and policy optimization for stable, intelligent locomotion.",
-        technologies: [
-          "Python",
-          "PyTorch",
-          "Deep Learning",
-          "Reinforcement Learning",
-          "Physics Simulation",
-        ],
-        highlights: ["Reinforcement Learning", "Policy Optimization", "Adaptive Gait Learning"],
       },
       {
         title: "DeepSight",

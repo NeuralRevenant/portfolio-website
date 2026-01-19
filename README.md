@@ -18,7 +18,7 @@ The backend for this portfolio website is built using **Node.js** and is hosted 
 ## Backend Code
 The backend code for this portfolio website is available in a separate repository:
 
-🔗 [Portfolio Website Backend](https://github.com/NeuralRevenant/portfolio-backend)
+🔗 [Portfolio Website Backend](https://github.com/kaushikchaturvedula/portfolio-backend)
 
 ---
 

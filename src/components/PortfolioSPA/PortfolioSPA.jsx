@@ -70,10 +70,10 @@ const PortfolioSPA = () => {
   const projectsData = useMemo(
     () => [
       {
-        title: "Clinica (Kiroween Hackathon)",
+        title: "Clinica",
         logo: ClinicaLogo,
         description:
-          "Intelligent medical assistant and full-stack platform built during the Kiroween hackathon for querying and analyzing medical/EHR data via natural language, combining FHIR APIs, agentic AI reasoning, and interactive graph visualizations to deliver secure, HIPAA-aligned insights.",
+          "Intelligent medical assistant and full-stack platform for querying and analyzing medical/EHR data via natural language, combining FHIR APIs, agentic AI reasoning, and interactive graph visualizations to deliver secure, HIPAA-aligned insights.",
         technologies: [
           "Next.js",
           "FastAPI",
@@ -487,7 +487,7 @@ const PortfolioSPA = () => {
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
             <a
-              href="https://github.com/NeuralRevenant"
+              href="https://github.com/kaushikchaturvedula"
               target="_blank"
               rel="noopener noreferrer"
               className="social-icon"
@@ -717,7 +717,7 @@ const PortfolioSPA = () => {
                   LinkedIn Profile
                 </a>
                 <a
-                  href="https://github.com/NeuralRevenant"
+                  href="https://github.com/kaushikchaturvedula"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="contact-method"

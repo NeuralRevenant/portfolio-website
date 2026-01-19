@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-website/static/css/main.4b97e5a1.css",
-    "main.js": "/portfolio-website/static/js/main.641caa10.js",
+    "main.css": "/portfolio-website/static/css/main.ce660514.css",
+    "main.js": "/portfolio-website/static/js/main.638f5b0d.js",
     "static/js/488.f1ad4097.chunk.js": "/portfolio-website/static/js/488.f1ad4097.chunk.js",
     "static/media/cancer_classification.png": "/portfolio-website/static/media/cancer_classification.b90f965819f5297f66fa.png",
     "static/media/uav_assistant.png": "/portfolio-website/static/media/uav_assistant.7fa78ea1bdc8aab5156b.png",
@@ -15,12 +15,12 @@
     "static/media/clinica.png": "/portfolio-website/static/media/clinica.4725522ac49b147bb4e5.png",
     "static/media/MIE_logo.webp": "/portfolio-website/static/media/MIE_logo.11cc12b6fefff8390215.webp",
     "index.html": "/portfolio-website/index.html",
-    "main.4b97e5a1.css.map": "/portfolio-website/static/css/main.4b97e5a1.css.map",
-    "main.641caa10.js.map": "/portfolio-website/static/js/main.641caa10.js.map",
+    "main.ce660514.css.map": "/portfolio-website/static/css/main.ce660514.css.map",
+    "main.638f5b0d.js.map": "/portfolio-website/static/js/main.638f5b0d.js.map",
     "488.f1ad4097.chunk.js.map": "/portfolio-website/static/js/488.f1ad4097.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b97e5a1.css",
-    "static/js/main.641caa10.js"
+    "static/css/main.ce660514.css",
+    "static/js/main.638f5b0d.js"
   ]
 }

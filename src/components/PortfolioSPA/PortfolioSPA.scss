@@ -1803,6 +1803,23 @@ $font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
               margin-bottom: 1.2rem;
             }
           }
+
+          .experience-contributions-label {
+            margin: 0 0 1rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: $success-color;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+
+            @media (max-width: 768px) {
+              font-size: 0.9rem;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 0.85rem;
+            }
+          }
           
           .experience-achievements {
             list-style: none;

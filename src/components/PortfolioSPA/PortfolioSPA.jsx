@@ -195,10 +195,8 @@ const PortfolioSPA = () => {
         date: "November 2025 – Present",
         location: "Hoffman Estates, Illinois, U.S.",
         type: "Internship",
-        description:
-          "Developing machine learning and data science pipelines to analyze revenue flows and optimize financial strategies for enterprise clients.",
-        achievements: [
-          "Built ML/data science pipelines using GCP, BigQuery, and Vertex AI to analyze revenue flows and optimize financial strategies for enterprise clients with generative AI-based analysis and insights.",
+        contributions: [
+          "Developed machine learning and data science pipelines using GCP, BigQuery, and Vertex AI to analyze revenue flows, optimizing financial strategies for enterprise clients.",
         ],
       },
       {
@@ -208,10 +206,8 @@ const PortfolioSPA = () => {
         date: "January 2025 – October 2025",
         location: "Fort Wayne, Indiana, U.S.",
         type: "Full-time",
-        description:
-          "Built and optimized production-grade healthcare platforms by developing high-performance backend services and integrating agentic AI tools for real-time clinical interactions and intelligent EHR data retrieval.",
-        achievements: [
-          "Built and optimized healthcare platforms (WebChart, BlueHive, Ozwell) by developing high-performance backend services and integrating agentic AI tools (RAG, MCP, LLM-based planning) to enable real-time clinical interactions, intelligent EHR data retrieval, and scalable workflow automation.",
+        contributions: [
+          "Built and optimized healthcare platforms (WebChart, BlueHive, Ozwell) by developing high-performance backend services and AI-driven systems by integrating agentic AI tools (RAG, MCP, LLM-based planning) to enable real-time clinical interactions, intelligent EHR data retrieval, and scalable workflow automation.",
           "Architected full-stack pipelines with Node.js/Fastify, FastAPI, and Next.js, integrating MongoDB, relational databases, and OpenSearch to handle high-throughput ingestion and low-latency retrieval with strict reliability guarantees.",
           "Led migration of a large API suite from a legacy Meteor platform to Node.js/Fastify, increasing system speed and developer efficiency while meeting tight deadlines.",
           "Collaborated with cross-functional engineering teams to define platform standards and improve internal development workflows.",
@@ -223,9 +219,9 @@ const PortfolioSPA = () => {
         logo: purdueLogo,
         date: "September 2024 – January 2025",
         type: "Part-time",
-        description:
-          "Programming Language Design Course: Assisted in delivering course material, grading assignments, and providing academic support to students. Involved in enhancing the overall educational experience for students through various teaching-related tasks.",
-        achievements: [],
+        contributions: [
+          "Assisted in delivering Programming Language Design course material, grading assignments, and providing academic support to students.",
+        ],
       },
       {
         title: "Research Assistant",
@@ -233,9 +229,8 @@ const PortfolioSPA = () => {
         logo: purdueLogo,
         date: "September 2024 – January 2025",
         type: "Part-time",
-        description:
+        contributions: [
           "Contributed to high-performance computational cosmological simulations (CosmoSim) research handling 300TB datasets.",
-        achievements: [
           "Implemented parallel processing techniques to improve performance in HPC environments.",
         ],
       },
@@ -244,13 +239,11 @@ const PortfolioSPA = () => {
         company: "Wibmo (a PayU company)",
         logo: wibmoLogo,
         date: "July 2022 – April 2023",
-        location: "Bengaluru, India",
+        location: "Bengaluru, Karnataka, India",
         type: "Full-time",
-        description:
-          "Designed, developed, and tested distributed backend services for a Risk-Based Authentication system securing global payment gateways, improving fraud detection and overall platform reliability.",
-        achievements: [
+        contributions: [
           "Designed and implemented scalable cloud-native Java Spring Boot and Node.js based distributed microservices for a Risk-Based Authentication engine used in global payment systems, improving fraud detection, system reliability, and strengthening throughput handling.",
-          "Developed event-driven services using Kafka and RabbitMQ to support asynchronous workflows and low-latency transaction processing, reducing average transaction latency by around 20% in production",
+          "Developed event-driven services using Kafka and RabbitMQ to support asynchronous workflows and low-latency transaction processing, reducing average transaction latency by around 20% in production.",
           "Built robust database migration pipelines from CouchbaseDB to MariaDB, ensuring data consistency and zero downtime during deployment.",
           "Collaborated across QA and DevOps teams to automate testing, streamline CI/CD pipelines, and deliver secure, production-grade releases.",
         ],
@@ -260,11 +253,9 @@ const PortfolioSPA = () => {
         company: "Freecharge",
         logo: freechargeLogo,
         date: "May 2021 – July 2021",
-        location: "Mumbai, India",
+        location: "Mumbai, Maharashtra, India",
         type: "Internship",
-        description:
-          "Built scalable financial transaction APIs and modular microservices to support secure, fault-tolerant payment workflows.",
-        achievements: [
+        contributions: [
           "Built scalable financial transaction APIs with Node.js/Express.js and MongoDB, enhancing efficiency and maintainability.",
           "Developed modular microservices with Docker and AWS ECS to handle secure, fault-tolerant payment workflows, reducing transaction failures and improving reliability.",
         ],
@@ -274,11 +265,10 @@ const PortfolioSPA = () => {
         company: "Ravgins",
         logo: ravginsLogo,
         date: "June 2020 – August 2020",
-        location: "New Delhi, India",
+        location: "New Delhi, Delhi, India",
         type: "Internship",
-        description:
-          "Designed and developed responsive web and mobile interfaces for Wobb, an influencer marketing platform, using React, Angular, and Ionic. Focused on creating clean, intuitive UIs and seamless user experiences across devices.",
-        achievements: [
+        contributions: [
+          "Designed and developed responsive web and mobile interfaces for Wobb, an influencer marketing platform, using React, Angular, and Ionic with a focus on clean, intuitive UX.",
           "Built and optimized full-stack components with modern front-end frameworks, HTML, CSS, and JavaScript/TypeScript to enhance engagement and usability.",
           "Implemented responsive design principles that improved interaction quality and cross-platform performance.",
           "Collaborated with a cross-functional team to deliver projects on time, aligning with objectives.",
@@ -621,13 +611,17 @@ const PortfolioSPA = () => {
                       ) : null}
                     </div>
                   </div>
-                  <p className="experience-description">{exp.description}</p>
-                  {exp.achievements.length > 0 && (
-                    <ul className="experience-achievements">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i}>{achievement}</li>
-                      ))}
-                    </ul>
+                  {exp.contributions?.length > 0 && (
+                    <>
+                      <p className="experience-contributions-label">
+                        Key contributions
+                      </p>
+                      <ul className="experience-achievements">
+                        {exp.contributions.map((contribution, i) => (
+                          <li key={i}>{contribution}</li>
+                        ))}
+                      </ul>
+                    </>
                   )}
                 </div>
               </div>
